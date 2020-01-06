@@ -87,4 +87,4 @@ let result: Bool = publicKey.isValidSignature(signature, for: data)
 
 ## Attribution
 
-The framework uses the Swift Wrapper [CEd25519](https://github.com/christophhagen/CEd25519).
+This framework uses the Swift Wrapper [CEd25519](https://github.com/christophhagen/CEd25519). The implementation was inspired by [Ed25519 for Swift 3.x](https://github.com/vzsg/ed25519).
