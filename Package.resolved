@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CEd25519",
+        "repositoryURL": "https://github.com/christophhagen/CEd25519",
+        "state": {
+          "branch": null,
+          "revision": "3f54b4b40e7dae0424c8132291f34ba0adec75c3",
+          "version": "0.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
