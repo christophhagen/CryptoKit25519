@@ -53,23 +53,28 @@ public enum Ed25519 {
                 data.count == PrivateKey.keyLength else {
                     throw Ed25519Error.noRandomnessAvailable
             }
-            var bytes = [UInt8](data)
-            bytes.withUnsafeMutableBufferPointer { priv in
-                ed25519_make_private_key(priv.baseAddress)
-            }
-            self.bytes = bytes
+             self.init(bytes: [UInt8](rawRepresentation))
         }
         
         /**
          Creates a Curve25519 private key for signing from a data representation.
          - Parameter rawRepresentation: A raw representation of the key as data.
          - Throws: `Ed25519Error.invalidKeyLength`, if the key length is not `PrivateKey.keyLength`.
+         - Note: If the key has invalid bytes, the key will be automatically corrected. When this happens, then `privateKey.rawRepresentation` will differ from the original input.
          */
         public init(rawRepresentation: Data) throws {
             guard rawRepresentation.count == PrivateKey.keyLength else {
                 throw Ed25519Error.invalidKeyLength
             }
-            self.bytes = [UInt8](rawRepresentation)
+            self.init(bytes: [UInt8](rawRepresentation))
+        }
+        
+        init(bytes: [UInt8]) {
+            var raw = bytes
+            raw.withUnsafeMutableBufferPointer { priv in
+                ed25519_make_private_key(priv.baseAddress)
+            }
+            self.bytes = raw
         }
         
         /// The corresponding public key.
