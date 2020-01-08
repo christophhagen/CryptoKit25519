@@ -53,7 +53,7 @@ public enum Ed25519 {
                 data.count == PrivateKey.keyLength else {
                     throw Ed25519Error.noRandomnessAvailable
             }
-             self.init(bytes: [UInt8](rawRepresentation))
+             self.init(bytes: [UInt8](data))
         }
         
         /**
@@ -78,7 +78,7 @@ public enum Ed25519 {
         }
         
         /// The corresponding public key.
-        var publicKey: PublicKey {
+        public var publicKey: PublicKey {
             // Length is valid, so no error can be thrown.
             return PublicKey(bytes: publicKeyBytes)
         }
@@ -100,7 +100,7 @@ public enum Ed25519 {
          - Parameter data: The data to sign.
          - Returns: The signature for the data.
          */
-        func signature(for data: Data) -> Data {
+        public func signature(for data: Data) -> Data {
             var signature = [UInt8](repeating: 0, count: 64)
             let publicKey = publicKeyBytes
             
@@ -122,7 +122,7 @@ public enum Ed25519 {
         }
         
         /// The raw bytes of the key.
-        var rawRepresentation: Data {
+        public var rawRepresentation: Data {
             return Data(bytes)
         }
     }
@@ -156,7 +156,7 @@ public enum Ed25519 {
         }
         
         /// The raw bytes of the key.
-        var rawRepresentation: Data {
+        public var rawRepresentation: Data {
             return Data(bytes)
         }
         
@@ -166,7 +166,7 @@ public enum Ed25519 {
          - Parameter data: The data covered by the signature.
          - Returns: A Boolean value that’s true when the signature is valid for the given data.
          */
-        func isValidSignature(_ signature: Data, for data: Data) -> Bool {
+        public func isValidSignature(_ signature: Data, for data: Data) -> Bool {
             guard signature.count == PublicKey.signatureLength else {
                 return false
             }
