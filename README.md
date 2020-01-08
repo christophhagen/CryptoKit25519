@@ -10,7 +10,7 @@ This module provides signature creation and verification based on Ed25519 in Swi
 When using the Swift Package Manager, specify in `Package.swift`:
 
 ````swift
-.package(.url: "https://github.com/christophhagen/Ed25519", from: "0.1.0")
+.package(.url: "https://github.com/christophhagen/Ed25519", from: "0.2.0")
 ````
 
 Then, in your source files, simply:
