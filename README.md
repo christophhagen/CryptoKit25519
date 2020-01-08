@@ -63,6 +63,12 @@ Or, when the public key is available as data:
 let publicKey = try Ed25519.PublicKey(rawRepresentation: data)
 ````
 
+Public keys can also be created from a private key:
+
+````swift
+let publicKey = privateKey.publicKey
+````
+
 Public keys can be converted to data:
 
 ````swift
