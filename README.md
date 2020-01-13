@@ -21,9 +21,10 @@ import CryptoKit25519
 
 ## Usage
 
-This library is built to be *very* similar to Apple's [`CryptoKit`](https://developer.apple.com/documentation/cryptokit) framework, so much of the documentation there also applies to this `CryptoKit25519`. Notable differences are:
+This library is built to be *very* similar to Apple's [`CryptoKit`](https://developer.apple.com/documentation/cryptokit) framework, so much of the documentation there also applies to this framework. Notable differences are:
 - Operations are NOT constant-time. 
 - Sensitive keys are NOT immediately zeroized after use.
+- Secure random number generation is NOT included.
 
 Currently supported operations:
 - Signatures with Curve25519 (No support for P521, P384, or P256)
