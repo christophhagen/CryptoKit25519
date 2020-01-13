@@ -1,4 +1,0 @@
-module CEd25519 {
-    umbrella "/Users/user/Development/Ed25519/.build/checkouts/CEd25519/Sources/CEd25519/include"
-    export *
-}

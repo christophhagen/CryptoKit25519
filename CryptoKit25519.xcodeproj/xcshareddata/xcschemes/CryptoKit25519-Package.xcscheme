@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Ed25519::Ed25519"
-               BuildableName = "Ed25519.framework"
-               BlueprintName = "Ed25519"
-               ReferencedContainer = "container:Ed25519.xcodeproj">
+               BlueprintIdentifier = "CryptoKit25519::CryptoKit25519"
+               BuildableName = "CryptoKit25519.framework"
+               BlueprintName = "CryptoKit25519"
+               ReferencedContainer = "container:CryptoKit25519.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Ed25519::Ed25519Tests"
-               BuildableName = "Ed25519Tests.xctest"
-               BlueprintName = "Ed25519Tests"
-               ReferencedContainer = "container:Ed25519.xcodeproj">
+               BlueprintIdentifier = "CryptoKit25519::CryptoKit25519Tests"
+               BuildableName = "CryptoKit25519Tests.xctest"
+               BlueprintName = "CryptoKit25519Tests"
+               ReferencedContainer = "container:CryptoKit25519.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

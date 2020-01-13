@@ -1,0 +1,1935 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"CryptoKit25519::CryptoKit25519PackageTests::ProductTarget" /* CryptoKit25519PackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_352 /* Build configuration list for PBXAggregateTarget "CryptoKit25519PackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_355 /* PBXTargetDependency */,
+			);
+			name = CryptoKit25519PackageTests;
+			productName = CryptoKit25519PackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		CE1E036523C693A900F15FD3 /* SharedSecret.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E036323C6936F00F15FD3 /* SharedSecret.swift */; };
+		CE1E036823C694F400F15FD3 /* SymmetricKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E036623C694C100F15FD3 /* SymmetricKey.swift */; };
+		CE1E036C23C69ADE00F15FD3 /* SigningPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E036A23C69AD800F15FD3 /* SigningPrivateKey.swift */; };
+		CE1E036F23C69BA200F15FD3 /* SigningPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E036D23C69B3400F15FD3 /* SigningPublicKey.swift */; };
+		OBJ_216 /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* blocks.c */; };
+		OBJ_217 /* compare.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_107 /* compare.c */; };
+		OBJ_218 /* curve_sigs.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_108 /* curve_sigs.c */; };
+		OBJ_219 /* elligator.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* elligator.c */; };
+		OBJ_220 /* fe_0.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* fe_0.c */; };
+		OBJ_221 /* fe_1.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* fe_1.c */; };
+		OBJ_222 /* fe_add.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_112 /* fe_add.c */; };
+		OBJ_223 /* fe_cmov.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* fe_cmov.c */; };
+		OBJ_224 /* fe_copy.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* fe_copy.c */; };
+		OBJ_225 /* fe_frombytes.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_115 /* fe_frombytes.c */; };
+		OBJ_226 /* fe_invert.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* fe_invert.c */; };
+		OBJ_227 /* fe_isequal.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_117 /* fe_isequal.c */; };
+		OBJ_228 /* fe_isnegative.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_118 /* fe_isnegative.c */; };
+		OBJ_229 /* fe_isnonzero.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* fe_isnonzero.c */; };
+		OBJ_230 /* fe_isreduced.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* fe_isreduced.c */; };
+		OBJ_231 /* fe_mont_rhs.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* fe_mont_rhs.c */; };
+		OBJ_232 /* fe_montx_to_edy.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_122 /* fe_montx_to_edy.c */; };
+		OBJ_233 /* fe_mul.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* fe_mul.c */; };
+		OBJ_234 /* fe_neg.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_124 /* fe_neg.c */; };
+		OBJ_235 /* fe_pow22523.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_125 /* fe_pow22523.c */; };
+		OBJ_236 /* fe_sq.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_126 /* fe_sq.c */; };
+		OBJ_237 /* fe_sq2.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_127 /* fe_sq2.c */; };
+		OBJ_238 /* fe_sqrt.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_128 /* fe_sqrt.c */; };
+		OBJ_239 /* fe_sub.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_129 /* fe_sub.c */; };
+		OBJ_240 /* fe_tobytes.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_130 /* fe_tobytes.c */; };
+		OBJ_241 /* ge_add.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_131 /* ge_add.c */; };
+		OBJ_242 /* ge_double_scalarmult.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_132 /* ge_double_scalarmult.c */; };
+		OBJ_243 /* ge_frombytes.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_133 /* ge_frombytes.c */; };
+		OBJ_244 /* ge_isneutral.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_134 /* ge_isneutral.c */; };
+		OBJ_245 /* ge_madd.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_135 /* ge_madd.c */; };
+		OBJ_246 /* ge_montx_to_p3.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_136 /* ge_montx_to_p3.c */; };
+		OBJ_247 /* ge_msub.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_137 /* ge_msub.c */; };
+		OBJ_248 /* ge_neg.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_138 /* ge_neg.c */; };
+		OBJ_249 /* ge_p1p1_to_p2.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_139 /* ge_p1p1_to_p2.c */; };
+		OBJ_250 /* ge_p1p1_to_p3.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_140 /* ge_p1p1_to_p3.c */; };
+		OBJ_251 /* ge_p2_0.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_141 /* ge_p2_0.c */; };
+		OBJ_252 /* ge_p2_dbl.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_142 /* ge_p2_dbl.c */; };
+		OBJ_253 /* ge_p3_0.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_143 /* ge_p3_0.c */; };
+		OBJ_254 /* ge_p3_add.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_144 /* ge_p3_add.c */; };
+		OBJ_255 /* ge_p3_dbl.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_145 /* ge_p3_dbl.c */; };
+		OBJ_256 /* ge_p3_to_cached.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_146 /* ge_p3_to_cached.c */; };
+		OBJ_257 /* ge_p3_to_montx.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_147 /* ge_p3_to_montx.c */; };
+		OBJ_258 /* ge_p3_to_p2.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_148 /* ge_p3_to_p2.c */; };
+		OBJ_259 /* ge_p3_tobytes.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_149 /* ge_p3_tobytes.c */; };
+		OBJ_260 /* ge_precomp_0.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_150 /* ge_precomp_0.c */; };
+		OBJ_261 /* ge_scalarmult.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_151 /* ge_scalarmult.c */; };
+		OBJ_262 /* ge_scalarmult_base.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_152 /* ge_scalarmult_base.c */; };
+		OBJ_263 /* ge_scalarmult_cofactor.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_153 /* ge_scalarmult_cofactor.c */; };
+		OBJ_264 /* ge_sub.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_154 /* ge_sub.c */; };
+		OBJ_265 /* ge_tobytes.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_155 /* ge_tobytes.c */; };
+		OBJ_266 /* gen_eddsa.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_156 /* gen_eddsa.c */; };
+		OBJ_267 /* gen_labelset.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_157 /* gen_labelset.c */; };
+		OBJ_268 /* gen_veddsa.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_158 /* gen_veddsa.c */; };
+		OBJ_269 /* gen_x.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_159 /* gen_x.c */; };
+		OBJ_270 /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_160 /* hash.c */; };
+		OBJ_271 /* internal_fast_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_161 /* internal_fast_tests.c */; };
+		OBJ_272 /* internal_slow_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_162 /* internal_slow_tests.c */; };
+		OBJ_273 /* keygen.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_163 /* keygen.c */; };
+		OBJ_274 /* open.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_164 /* open.c */; };
+		OBJ_275 /* open_modified.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_165 /* open_modified.c */; };
+		OBJ_276 /* point_isreduced.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_166 /* point_isreduced.c */; };
+		OBJ_277 /* sc_clamp.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_167 /* sc_clamp.c */; };
+		OBJ_278 /* sc_cmov.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_168 /* sc_cmov.c */; };
+		OBJ_279 /* sc_isreduced.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_169 /* sc_isreduced.c */; };
+		OBJ_280 /* sc_muladd.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_170 /* sc_muladd.c */; };
+		OBJ_281 /* sc_neg.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_171 /* sc_neg.c */; };
+		OBJ_282 /* sc_reduce.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_172 /* sc_reduce.c */; };
+		OBJ_283 /* sign.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_173 /* sign.c */; };
+		OBJ_284 /* sign_modified.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_174 /* sign_modified.c */; };
+		OBJ_285 /* utility.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_175 /* utility.c */; };
+		OBJ_286 /* xeddsa.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_176 /* xeddsa.c */; };
+		OBJ_287 /* zeroize.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_177 /* zeroize.c */; };
+		OBJ_288 /* curve25519-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_178 /* curve25519-donna.c */; };
+		OBJ_290 /* curve25519-donna.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_180 /* curve25519-donna.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_291 /* internal_fast_tests.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_181 /* internal_fast_tests.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_292 /* CCurve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_182 /* CCurve25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_293 /* internal_slow_tests.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_183 /* internal_slow_tests.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_294 /* curve_sigs.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_184 /* curve_sigs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_295 /* gen_x.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_185 /* gen_x.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_302 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_186 /* Package.swift */; };
+		OBJ_308 /* add_scalar.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_190 /* add_scalar.c */; };
+		OBJ_309 /* fe.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_191 /* fe.c */; };
+		OBJ_310 /* ge.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_192 /* ge.c */; };
+		OBJ_311 /* key_exchange.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_193 /* key_exchange.c */; };
+		OBJ_312 /* keypair.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_194 /* keypair.c */; };
+		OBJ_313 /* sc.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_195 /* sc.c */; };
+		OBJ_314 /* seed.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_196 /* seed.c */; };
+		OBJ_315 /* sha512.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_197 /* sha512.c */; };
+		OBJ_316 /* sign.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_198 /* sign.c */; };
+		OBJ_317 /* verify.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_199 /* verify.c */; };
+		OBJ_319 /* CEd25519.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_201 /* CEd25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_326 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_202 /* Package.swift */; };
+		OBJ_332 /* Curve25519.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Curve25519.swift */; };
+		OBJ_333 /* KeyAgreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* KeyAgreement.swift */; };
+		OBJ_334 /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* PrivateKey.swift */; };
+		OBJ_335 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* PublicKey.swift */; };
+		OBJ_336 /* Signing.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Signing.swift */; };
+		OBJ_338 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CryptoSwift::CryptoSwift::Product" /* CryptoSwift.framework */; };
+		OBJ_339 /* CCurve25519.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CCurve25519::CCurve25519::Product" /* CCurve25519.framework */; };
+		OBJ_340 /* CEd25519.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CEd25519::CEd25519::Product" /* CEd25519.framework */; };
+		OBJ_350 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_361 /* Ed25519Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Ed25519Tests.swift */; };
+		OBJ_362 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* XCTestManifests.swift */; };
+		OBJ_364 /* CryptoKit25519.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CryptoKit25519::CryptoKit25519::Product" /* CryptoKit25519.framework */; };
+		OBJ_365 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CryptoSwift::CryptoSwift::Product" /* CryptoSwift.framework */; };
+		OBJ_366 /* CCurve25519.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CCurve25519::CCurve25519::Product" /* CCurve25519.framework */; };
+		OBJ_367 /* CEd25519.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CEd25519::CEd25519::Product" /* CEd25519.framework */; };
+		OBJ_376 /* AEAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* AEAD.swift */; };
+		OBJ_377 /* AEADChaCha20Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* AEADChaCha20Poly1305.swift */; };
+		OBJ_378 /* AES.Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* AES.Cryptors.swift */; };
+		OBJ_379 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* AES.swift */; };
+		OBJ_380 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Array+Extension.swift */; };
+		OBJ_381 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Authenticator.swift */; };
+		OBJ_382 /* BatchedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* BatchedCollection.swift */; };
+		OBJ_383 /* Bit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* Bit.swift */; };
+		OBJ_384 /* BlockCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* BlockCipher.swift */; };
+		OBJ_385 /* BlockDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* BlockDecryptor.swift */; };
+		OBJ_386 /* BlockEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* BlockEncryptor.swift */; };
+		OBJ_387 /* BlockMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* BlockMode.swift */; };
+		OBJ_388 /* BlockModeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* BlockModeOptions.swift */; };
+		OBJ_389 /* CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* CBC.swift */; };
+		OBJ_390 /* CCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* CCM.swift */; };
+		OBJ_391 /* CFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* CFB.swift */; };
+		OBJ_392 /* CTR.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* CTR.swift */; };
+		OBJ_393 /* CipherModeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* CipherModeWorker.swift */; };
+		OBJ_394 /* ECB.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* ECB.swift */; };
+		OBJ_395 /* GCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* GCM.swift */; };
+		OBJ_396 /* OFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* OFB.swift */; };
+		OBJ_397 /* PCBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* PCBC.swift */; };
+		OBJ_398 /* Blowfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Blowfish.swift */; };
+		OBJ_399 /* CBCMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* CBCMAC.swift */; };
+		OBJ_400 /* CMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* CMAC.swift */; };
+		OBJ_401 /* ChaCha20.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* ChaCha20.swift */; };
+		OBJ_402 /* Checksum.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Checksum.swift */; };
+		OBJ_403 /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Cipher.swift */; };
+		OBJ_404 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* Collection+Extension.swift */; };
+		OBJ_405 /* CompactMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* CompactMap.swift */; };
+		OBJ_406 /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Cryptor.swift */; };
+		OBJ_407 /* Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Cryptors.swift */; };
+		OBJ_408 /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Digest.swift */; };
+		OBJ_409 /* DigestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* DigestType.swift */; };
+		OBJ_410 /* AES+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* AES+Foundation.swift */; };
+		OBJ_411 /* Array+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* Array+Foundation.swift */; };
+		OBJ_412 /* Blowfish+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Blowfish+Foundation.swift */; };
+		OBJ_413 /* ChaCha20+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* ChaCha20+Foundation.swift */; };
+		OBJ_414 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* Data+Extension.swift */; };
+		OBJ_415 /* HMAC+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* HMAC+Foundation.swift */; };
+		OBJ_416 /* Rabbit+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* Rabbit+Foundation.swift */; };
+		OBJ_417 /* String+FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* String+FoundationExtension.swift */; };
+		OBJ_418 /* Utils+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* Utils+Foundation.swift */; };
+		OBJ_419 /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* Generics.swift */; };
+		OBJ_420 /* HKDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* HKDF.swift */; };
+		OBJ_421 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* HMAC.swift */; };
+		OBJ_422 /* ISO78164Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* ISO78164Padding.swift */; };
+		OBJ_423 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* Int+Extension.swift */; };
+		OBJ_424 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* MD5.swift */; };
+		OBJ_425 /* NoPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* NoPadding.swift */; };
+		OBJ_426 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* Operators.swift */; };
+		OBJ_427 /* PBKDF1.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* PBKDF1.swift */; };
+		OBJ_428 /* PBKDF2.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* PBKDF2.swift */; };
+		OBJ_429 /* PKCS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* PKCS5.swift */; };
+		OBJ_430 /* PKCS7.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* PKCS7.swift */; };
+		OBJ_431 /* PKCS7Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* PKCS7Padding.swift */; };
+		OBJ_432 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* Padding.swift */; };
+		OBJ_433 /* Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* Poly1305.swift */; };
+		OBJ_434 /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Rabbit.swift */; };
+		OBJ_435 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* SHA1.swift */; };
+		OBJ_436 /* SHA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* SHA2.swift */; };
+		OBJ_437 /* SHA3.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* SHA3.swift */; };
+		OBJ_438 /* Scrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* Scrypt.swift */; };
+		OBJ_439 /* SecureBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* SecureBytes.swift */; };
+		OBJ_440 /* StreamDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_90 /* StreamDecryptor.swift */; };
+		OBJ_441 /* StreamEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_91 /* StreamEncryptor.swift */; };
+		OBJ_442 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* String+Extension.swift */; };
+		OBJ_443 /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* UInt128.swift */; };
+		OBJ_444 /* UInt16+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* UInt16+Extension.swift */; };
+		OBJ_445 /* UInt32+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* UInt32+Extension.swift */; };
+		OBJ_446 /* UInt64+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* UInt64+Extension.swift */; };
+		OBJ_447 /* UInt8+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* UInt8+Extension.swift */; };
+		OBJ_448 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* Updatable.swift */; };
+		OBJ_449 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* Utils.swift */; };
+		OBJ_450 /* ZeroPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* ZeroPadding.swift */; };
+		OBJ_457 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* Package.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE1E035B23C68C7300F15FD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CryptoSwift::CryptoSwift";
+			remoteInfo = CryptoSwift;
+		};
+		CE1E035C23C68C7300F15FD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CCurve25519::CCurve25519";
+			remoteInfo = CCurve25519;
+		};
+		CE1E035D23C68C7300F15FD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CEd25519::CEd25519";
+			remoteInfo = CEd25519;
+		};
+		CE1E035E23C68C7300F15FD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CryptoKit25519::CryptoKit25519";
+			remoteInfo = CryptoKit25519;
+		};
+		CE1E035F23C68C7300F15FD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CryptoSwift::CryptoSwift";
+			remoteInfo = CryptoSwift;
+		};
+		CE1E036023C68C7300F15FD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CCurve25519::CCurve25519";
+			remoteInfo = CCurve25519;
+		};
+		CE1E036123C68C7300F15FD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CEd25519::CEd25519";
+			remoteInfo = CEd25519;
+		};
+		CE1E036223C68C7400F15FD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CryptoKit25519::CryptoKit25519Tests";
+			remoteInfo = CryptoKit25519Tests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		"CCurve25519::CCurve25519::Product" /* CCurve25519.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CCurve25519.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1E036323C6936F00F15FD3 /* SharedSecret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedSecret.swift; sourceTree = "<group>"; };
+		CE1E036623C694C100F15FD3 /* SymmetricKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymmetricKey.swift; sourceTree = "<group>"; };
+		CE1E036A23C69AD800F15FD3 /* SigningPrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningPrivateKey.swift; sourceTree = "<group>"; };
+		CE1E036D23C69B3400F15FD3 /* SigningPublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningPublicKey.swift; sourceTree = "<group>"; };
+		"CEd25519::CEd25519::Product" /* CEd25519.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CEd25519.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"CryptoKit25519::CryptoKit25519::Product" /* CryptoKit25519.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoKit25519.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"CryptoKit25519::CryptoKit25519Tests::Product" /* CryptoKit25519Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CryptoKit25519Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"CryptoSwift::CryptoSwift::Product" /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_100 /* ZeroPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroPadding.swift; sourceTree = "<group>"; };
+		OBJ_101 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/user/Development/CryptoKit25519/.build/checkouts/CryptoSwift/Package.swift; sourceTree = "<group>"; };
+		OBJ_106 /* blocks.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = blocks.c; sourceTree = "<group>"; };
+		OBJ_107 /* compare.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = compare.c; sourceTree = "<group>"; };
+		OBJ_108 /* curve_sigs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = curve_sigs.c; sourceTree = "<group>"; };
+		OBJ_109 /* elligator.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = elligator.c; sourceTree = "<group>"; };
+		OBJ_11 /* KeyAgreement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyAgreement.swift; sourceTree = "<group>"; };
+		OBJ_110 /* fe_0.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_0.c; sourceTree = "<group>"; };
+		OBJ_111 /* fe_1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_1.c; sourceTree = "<group>"; };
+		OBJ_112 /* fe_add.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_add.c; sourceTree = "<group>"; };
+		OBJ_113 /* fe_cmov.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_cmov.c; sourceTree = "<group>"; };
+		OBJ_114 /* fe_copy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_copy.c; sourceTree = "<group>"; };
+		OBJ_115 /* fe_frombytes.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_frombytes.c; sourceTree = "<group>"; };
+		OBJ_116 /* fe_invert.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_invert.c; sourceTree = "<group>"; };
+		OBJ_117 /* fe_isequal.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_isequal.c; sourceTree = "<group>"; };
+		OBJ_118 /* fe_isnegative.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_isnegative.c; sourceTree = "<group>"; };
+		OBJ_119 /* fe_isnonzero.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_isnonzero.c; sourceTree = "<group>"; };
+		OBJ_12 /* PrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKey.swift; sourceTree = "<group>"; };
+		OBJ_120 /* fe_isreduced.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_isreduced.c; sourceTree = "<group>"; };
+		OBJ_121 /* fe_mont_rhs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_mont_rhs.c; sourceTree = "<group>"; };
+		OBJ_122 /* fe_montx_to_edy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_montx_to_edy.c; sourceTree = "<group>"; };
+		OBJ_123 /* fe_mul.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_mul.c; sourceTree = "<group>"; };
+		OBJ_124 /* fe_neg.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_neg.c; sourceTree = "<group>"; };
+		OBJ_125 /* fe_pow22523.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_pow22523.c; sourceTree = "<group>"; };
+		OBJ_126 /* fe_sq.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_sq.c; sourceTree = "<group>"; };
+		OBJ_127 /* fe_sq2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_sq2.c; sourceTree = "<group>"; };
+		OBJ_128 /* fe_sqrt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_sqrt.c; sourceTree = "<group>"; };
+		OBJ_129 /* fe_sub.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_sub.c; sourceTree = "<group>"; };
+		OBJ_13 /* PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
+		OBJ_130 /* fe_tobytes.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe_tobytes.c; sourceTree = "<group>"; };
+		OBJ_131 /* ge_add.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_add.c; sourceTree = "<group>"; };
+		OBJ_132 /* ge_double_scalarmult.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_double_scalarmult.c; sourceTree = "<group>"; };
+		OBJ_133 /* ge_frombytes.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_frombytes.c; sourceTree = "<group>"; };
+		OBJ_134 /* ge_isneutral.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_isneutral.c; sourceTree = "<group>"; };
+		OBJ_135 /* ge_madd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_madd.c; sourceTree = "<group>"; };
+		OBJ_136 /* ge_montx_to_p3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_montx_to_p3.c; sourceTree = "<group>"; };
+		OBJ_137 /* ge_msub.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_msub.c; sourceTree = "<group>"; };
+		OBJ_138 /* ge_neg.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_neg.c; sourceTree = "<group>"; };
+		OBJ_139 /* ge_p1p1_to_p2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_p1p1_to_p2.c; sourceTree = "<group>"; };
+		OBJ_14 /* Signing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signing.swift; sourceTree = "<group>"; };
+		OBJ_140 /* ge_p1p1_to_p3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_p1p1_to_p3.c; sourceTree = "<group>"; };
+		OBJ_141 /* ge_p2_0.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_p2_0.c; sourceTree = "<group>"; };
+		OBJ_142 /* ge_p2_dbl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_p2_dbl.c; sourceTree = "<group>"; };
+		OBJ_143 /* ge_p3_0.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_p3_0.c; sourceTree = "<group>"; };
+		OBJ_144 /* ge_p3_add.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_p3_add.c; sourceTree = "<group>"; };
+		OBJ_145 /* ge_p3_dbl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_p3_dbl.c; sourceTree = "<group>"; };
+		OBJ_146 /* ge_p3_to_cached.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_p3_to_cached.c; sourceTree = "<group>"; };
+		OBJ_147 /* ge_p3_to_montx.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_p3_to_montx.c; sourceTree = "<group>"; };
+		OBJ_148 /* ge_p3_to_p2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_p3_to_p2.c; sourceTree = "<group>"; };
+		OBJ_149 /* ge_p3_tobytes.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_p3_tobytes.c; sourceTree = "<group>"; };
+		OBJ_150 /* ge_precomp_0.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_precomp_0.c; sourceTree = "<group>"; };
+		OBJ_151 /* ge_scalarmult.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_scalarmult.c; sourceTree = "<group>"; };
+		OBJ_152 /* ge_scalarmult_base.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_scalarmult_base.c; sourceTree = "<group>"; };
+		OBJ_153 /* ge_scalarmult_cofactor.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_scalarmult_cofactor.c; sourceTree = "<group>"; };
+		OBJ_154 /* ge_sub.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_sub.c; sourceTree = "<group>"; };
+		OBJ_155 /* ge_tobytes.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge_tobytes.c; sourceTree = "<group>"; };
+		OBJ_156 /* gen_eddsa.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gen_eddsa.c; sourceTree = "<group>"; };
+		OBJ_157 /* gen_labelset.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gen_labelset.c; sourceTree = "<group>"; };
+		OBJ_158 /* gen_veddsa.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gen_veddsa.c; sourceTree = "<group>"; };
+		OBJ_159 /* gen_x.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gen_x.c; sourceTree = "<group>"; };
+		OBJ_160 /* hash.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hash.c; sourceTree = "<group>"; };
+		OBJ_161 /* internal_fast_tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = internal_fast_tests.c; sourceTree = "<group>"; };
+		OBJ_162 /* internal_slow_tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = internal_slow_tests.c; sourceTree = "<group>"; };
+		OBJ_163 /* keygen.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = keygen.c; sourceTree = "<group>"; };
+		OBJ_164 /* open.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = open.c; sourceTree = "<group>"; };
+		OBJ_165 /* open_modified.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = open_modified.c; sourceTree = "<group>"; };
+		OBJ_166 /* point_isreduced.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = point_isreduced.c; sourceTree = "<group>"; };
+		OBJ_167 /* sc_clamp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sc_clamp.c; sourceTree = "<group>"; };
+		OBJ_168 /* sc_cmov.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sc_cmov.c; sourceTree = "<group>"; };
+		OBJ_169 /* sc_isreduced.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sc_isreduced.c; sourceTree = "<group>"; };
+		OBJ_17 /* Ed25519Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ed25519Tests.swift; sourceTree = "<group>"; };
+		OBJ_170 /* sc_muladd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sc_muladd.c; sourceTree = "<group>"; };
+		OBJ_171 /* sc_neg.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sc_neg.c; sourceTree = "<group>"; };
+		OBJ_172 /* sc_reduce.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sc_reduce.c; sourceTree = "<group>"; };
+		OBJ_173 /* sign.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sign.c; sourceTree = "<group>"; };
+		OBJ_174 /* sign_modified.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sign_modified.c; sourceTree = "<group>"; };
+		OBJ_175 /* utility.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utility.c; sourceTree = "<group>"; };
+		OBJ_176 /* xeddsa.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = xeddsa.c; sourceTree = "<group>"; };
+		OBJ_177 /* zeroize.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = zeroize.c; sourceTree = "<group>"; };
+		OBJ_178 /* curve25519-donna.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "curve25519-donna.c"; sourceTree = "<group>"; };
+		OBJ_18 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_180 /* curve25519-donna.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "curve25519-donna.h"; sourceTree = "<group>"; };
+		OBJ_181 /* internal_fast_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = internal_fast_tests.h; sourceTree = "<group>"; };
+		OBJ_182 /* CCurve25519.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCurve25519.h; sourceTree = "<group>"; };
+		OBJ_183 /* internal_slow_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = internal_slow_tests.h; sourceTree = "<group>"; };
+		OBJ_184 /* curve_sigs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = curve_sigs.h; sourceTree = "<group>"; };
+		OBJ_185 /* gen_x.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gen_x.h; sourceTree = "<group>"; };
+		OBJ_186 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/user/Development/CryptoKit25519/.build/checkouts/CCurve25519/Package.swift; sourceTree = "<group>"; };
+		OBJ_190 /* add_scalar.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = add_scalar.c; sourceTree = "<group>"; };
+		OBJ_191 /* fe.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fe.c; sourceTree = "<group>"; };
+		OBJ_192 /* ge.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ge.c; sourceTree = "<group>"; };
+		OBJ_193 /* key_exchange.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = key_exchange.c; sourceTree = "<group>"; };
+		OBJ_194 /* keypair.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = keypair.c; sourceTree = "<group>"; };
+		OBJ_195 /* sc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sc.c; sourceTree = "<group>"; };
+		OBJ_196 /* seed.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = seed.c; sourceTree = "<group>"; };
+		OBJ_197 /* sha512.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sha512.c; sourceTree = "<group>"; };
+		OBJ_198 /* sign.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sign.c; sourceTree = "<group>"; };
+		OBJ_199 /* verify.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = verify.c; sourceTree = "<group>"; };
+		OBJ_201 /* CEd25519.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CEd25519.h; sourceTree = "<group>"; };
+		OBJ_202 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/user/Development/CryptoKit25519/.build/checkouts/CEd25519/Package.swift; sourceTree = "<group>"; };
+		OBJ_209 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		OBJ_210 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_23 /* AEAD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEAD.swift; sourceTree = "<group>"; };
+		OBJ_24 /* AEADChaCha20Poly1305.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEADChaCha20Poly1305.swift; sourceTree = "<group>"; };
+		OBJ_25 /* AES.Cryptors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES.Cryptors.swift; sourceTree = "<group>"; };
+		OBJ_26 /* AES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
+		OBJ_27 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		OBJ_28 /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
+		OBJ_29 /* BatchedCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchedCollection.swift; sourceTree = "<group>"; };
+		OBJ_30 /* Bit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bit.swift; sourceTree = "<group>"; };
+		OBJ_31 /* BlockCipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockCipher.swift; sourceTree = "<group>"; };
+		OBJ_32 /* BlockDecryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockDecryptor.swift; sourceTree = "<group>"; };
+		OBJ_33 /* BlockEncryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockEncryptor.swift; sourceTree = "<group>"; };
+		OBJ_35 /* BlockMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockMode.swift; sourceTree = "<group>"; };
+		OBJ_36 /* BlockModeOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockModeOptions.swift; sourceTree = "<group>"; };
+		OBJ_37 /* CBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBC.swift; sourceTree = "<group>"; };
+		OBJ_38 /* CCM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCM.swift; sourceTree = "<group>"; };
+		OBJ_39 /* CFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFB.swift; sourceTree = "<group>"; };
+		OBJ_40 /* CTR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTR.swift; sourceTree = "<group>"; };
+		OBJ_41 /* CipherModeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherModeWorker.swift; sourceTree = "<group>"; };
+		OBJ_42 /* ECB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECB.swift; sourceTree = "<group>"; };
+		OBJ_43 /* GCM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCM.swift; sourceTree = "<group>"; };
+		OBJ_44 /* OFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFB.swift; sourceTree = "<group>"; };
+		OBJ_45 /* PCBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCBC.swift; sourceTree = "<group>"; };
+		OBJ_46 /* Blowfish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blowfish.swift; sourceTree = "<group>"; };
+		OBJ_47 /* CBCMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBCMAC.swift; sourceTree = "<group>"; };
+		OBJ_48 /* CMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMAC.swift; sourceTree = "<group>"; };
+		OBJ_49 /* ChaCha20.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaCha20.swift; sourceTree = "<group>"; };
+		OBJ_50 /* Checksum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checksum.swift; sourceTree = "<group>"; };
+		OBJ_51 /* Cipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher.swift; sourceTree = "<group>"; };
+		OBJ_52 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		OBJ_53 /* CompactMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactMap.swift; sourceTree = "<group>"; };
+		OBJ_54 /* Cryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cryptor.swift; sourceTree = "<group>"; };
+		OBJ_55 /* Cryptors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cryptors.swift; sourceTree = "<group>"; };
+		OBJ_56 /* Digest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digest.swift; sourceTree = "<group>"; };
+		OBJ_57 /* DigestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigestType.swift; sourceTree = "<group>"; };
+		OBJ_59 /* AES+Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AES+Foundation.swift"; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* Array+Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Foundation.swift"; sourceTree = "<group>"; };
+		OBJ_61 /* Blowfish+Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Blowfish+Foundation.swift"; sourceTree = "<group>"; };
+		OBJ_62 /* ChaCha20+Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChaCha20+Foundation.swift"; sourceTree = "<group>"; };
+		OBJ_63 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		OBJ_64 /* HMAC+Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HMAC+Foundation.swift"; sourceTree = "<group>"; };
+		OBJ_65 /* Rabbit+Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rabbit+Foundation.swift"; sourceTree = "<group>"; };
+		OBJ_66 /* String+FoundationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FoundationExtension.swift"; sourceTree = "<group>"; };
+		OBJ_67 /* Utils+Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utils+Foundation.swift"; sourceTree = "<group>"; };
+		OBJ_68 /* Generics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generics.swift; sourceTree = "<group>"; };
+		OBJ_69 /* HKDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKDF.swift; sourceTree = "<group>"; };
+		OBJ_70 /* HMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
+		OBJ_71 /* ISO78164Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO78164Padding.swift; sourceTree = "<group>"; };
+		OBJ_72 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		OBJ_73 /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
+		OBJ_74 /* NoPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPadding.swift; sourceTree = "<group>"; };
+		OBJ_75 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		OBJ_77 /* PBKDF1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBKDF1.swift; sourceTree = "<group>"; };
+		OBJ_78 /* PBKDF2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBKDF2.swift; sourceTree = "<group>"; };
+		OBJ_79 /* PKCS5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCS5.swift; sourceTree = "<group>"; };
+		OBJ_80 /* PKCS7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCS7.swift; sourceTree = "<group>"; };
+		OBJ_81 /* PKCS7Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCS7Padding.swift; sourceTree = "<group>"; };
+		OBJ_82 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
+		OBJ_83 /* Poly1305.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poly1305.swift; sourceTree = "<group>"; };
+		OBJ_84 /* Rabbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rabbit.swift; sourceTree = "<group>"; };
+		OBJ_85 /* SHA1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
+		OBJ_86 /* SHA2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA2.swift; sourceTree = "<group>"; };
+		OBJ_87 /* SHA3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA3.swift; sourceTree = "<group>"; };
+		OBJ_88 /* Scrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scrypt.swift; sourceTree = "<group>"; };
+		OBJ_89 /* SecureBytes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureBytes.swift; sourceTree = "<group>"; };
+		OBJ_9 /* Curve25519.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curve25519.swift; sourceTree = "<group>"; };
+		OBJ_90 /* StreamDecryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDecryptor.swift; sourceTree = "<group>"; };
+		OBJ_91 /* StreamEncryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamEncryptor.swift; sourceTree = "<group>"; };
+		OBJ_92 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		OBJ_93 /* UInt128.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UInt128.swift; sourceTree = "<group>"; };
+		OBJ_94 /* UInt16+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt16+Extension.swift"; sourceTree = "<group>"; };
+		OBJ_95 /* UInt32+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt32+Extension.swift"; sourceTree = "<group>"; };
+		OBJ_96 /* UInt64+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt64+Extension.swift"; sourceTree = "<group>"; };
+		OBJ_97 /* UInt8+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt8+Extension.swift"; sourceTree = "<group>"; };
+		OBJ_98 /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
+		OBJ_99 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_296 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_320 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_338 /* CryptoSwift.framework in Frameworks */,
+				OBJ_339 /* CCurve25519.framework in Frameworks */,
+				OBJ_340 /* CEd25519.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_363 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_364 /* CryptoKit25519.framework in Frameworks */,
+				OBJ_365 /* CryptoSwift.framework in Frameworks */,
+				OBJ_366 /* CCurve25519.framework in Frameworks */,
+				OBJ_367 /* CEd25519.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_451 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE1E036923C69AAE00F15FD3 /* Signing */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_14 /* Signing.swift */,
+				CE1E036A23C69AD800F15FD3 /* SigningPrivateKey.swift */,
+				CE1E036D23C69B3400F15FD3 /* SigningPublicKey.swift */,
+			);
+			path = Signing;
+			sourceTree = "<group>";
+		};
+		OBJ_10 /* KeyAgreement */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_11 /* KeyAgreement.swift */,
+				OBJ_12 /* PrivateKey.swift */,
+				OBJ_13 /* PublicKey.swift */,
+			);
+			path = KeyAgreement;
+			sourceTree = "<group>";
+		};
+		OBJ_102 /* CCurve25519 1.0.1 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_103 /* CCurve25519 */,
+				OBJ_186 /* Package.swift */,
+			);
+			name = "CCurve25519 1.0.1";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_103 /* CCurve25519 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_104 /* lib */,
+				OBJ_179 /* include */,
+			);
+			name = CCurve25519;
+			path = .build/checkouts/CCurve25519/Sources/CCurve25519;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_104 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_105 /* Ed25519 */,
+				OBJ_178 /* curve25519-donna.c */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		OBJ_105 /* Ed25519 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_106 /* blocks.c */,
+				OBJ_107 /* compare.c */,
+				OBJ_108 /* curve_sigs.c */,
+				OBJ_109 /* elligator.c */,
+				OBJ_110 /* fe_0.c */,
+				OBJ_111 /* fe_1.c */,
+				OBJ_112 /* fe_add.c */,
+				OBJ_113 /* fe_cmov.c */,
+				OBJ_114 /* fe_copy.c */,
+				OBJ_115 /* fe_frombytes.c */,
+				OBJ_116 /* fe_invert.c */,
+				OBJ_117 /* fe_isequal.c */,
+				OBJ_118 /* fe_isnegative.c */,
+				OBJ_119 /* fe_isnonzero.c */,
+				OBJ_120 /* fe_isreduced.c */,
+				OBJ_121 /* fe_mont_rhs.c */,
+				OBJ_122 /* fe_montx_to_edy.c */,
+				OBJ_123 /* fe_mul.c */,
+				OBJ_124 /* fe_neg.c */,
+				OBJ_125 /* fe_pow22523.c */,
+				OBJ_126 /* fe_sq.c */,
+				OBJ_127 /* fe_sq2.c */,
+				OBJ_128 /* fe_sqrt.c */,
+				OBJ_129 /* fe_sub.c */,
+				OBJ_130 /* fe_tobytes.c */,
+				OBJ_131 /* ge_add.c */,
+				OBJ_132 /* ge_double_scalarmult.c */,
+				OBJ_133 /* ge_frombytes.c */,
+				OBJ_134 /* ge_isneutral.c */,
+				OBJ_135 /* ge_madd.c */,
+				OBJ_136 /* ge_montx_to_p3.c */,
+				OBJ_137 /* ge_msub.c */,
+				OBJ_138 /* ge_neg.c */,
+				OBJ_139 /* ge_p1p1_to_p2.c */,
+				OBJ_140 /* ge_p1p1_to_p3.c */,
+				OBJ_141 /* ge_p2_0.c */,
+				OBJ_142 /* ge_p2_dbl.c */,
+				OBJ_143 /* ge_p3_0.c */,
+				OBJ_144 /* ge_p3_add.c */,
+				OBJ_145 /* ge_p3_dbl.c */,
+				OBJ_146 /* ge_p3_to_cached.c */,
+				OBJ_147 /* ge_p3_to_montx.c */,
+				OBJ_148 /* ge_p3_to_p2.c */,
+				OBJ_149 /* ge_p3_tobytes.c */,
+				OBJ_150 /* ge_precomp_0.c */,
+				OBJ_151 /* ge_scalarmult.c */,
+				OBJ_152 /* ge_scalarmult_base.c */,
+				OBJ_153 /* ge_scalarmult_cofactor.c */,
+				OBJ_154 /* ge_sub.c */,
+				OBJ_155 /* ge_tobytes.c */,
+				OBJ_156 /* gen_eddsa.c */,
+				OBJ_157 /* gen_labelset.c */,
+				OBJ_158 /* gen_veddsa.c */,
+				OBJ_159 /* gen_x.c */,
+				OBJ_160 /* hash.c */,
+				OBJ_161 /* internal_fast_tests.c */,
+				OBJ_162 /* internal_slow_tests.c */,
+				OBJ_163 /* keygen.c */,
+				OBJ_164 /* open.c */,
+				OBJ_165 /* open_modified.c */,
+				OBJ_166 /* point_isreduced.c */,
+				OBJ_167 /* sc_clamp.c */,
+				OBJ_168 /* sc_cmov.c */,
+				OBJ_169 /* sc_isreduced.c */,
+				OBJ_170 /* sc_muladd.c */,
+				OBJ_171 /* sc_neg.c */,
+				OBJ_172 /* sc_reduce.c */,
+				OBJ_173 /* sign.c */,
+				OBJ_174 /* sign_modified.c */,
+				OBJ_175 /* utility.c */,
+				OBJ_176 /* xeddsa.c */,
+				OBJ_177 /* zeroize.c */,
+			);
+			path = Ed25519;
+			sourceTree = "<group>";
+		};
+		OBJ_15 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_16 /* CryptoKit25519Tests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_16 /* CryptoKit25519Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_17 /* Ed25519Tests.swift */,
+				OBJ_18 /* XCTestManifests.swift */,
+			);
+			name = CryptoKit25519Tests;
+			path = Tests/CryptoKit25519Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_179 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_180 /* curve25519-donna.h */,
+				OBJ_181 /* internal_fast_tests.h */,
+				OBJ_182 /* CCurve25519.h */,
+				OBJ_183 /* internal_slow_tests.h */,
+				OBJ_184 /* curve_sigs.h */,
+				OBJ_185 /* gen_x.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		OBJ_187 /* CEd25519 0.0.6 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_188 /* CEd25519 */,
+				OBJ_202 /* Package.swift */,
+			);
+			name = "CEd25519 0.0.6";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_188 /* CEd25519 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_189 /* lib */,
+				OBJ_200 /* include */,
+			);
+			name = CEd25519;
+			path = .build/checkouts/CEd25519/Sources/CEd25519;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_189 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_190 /* add_scalar.c */,
+				OBJ_191 /* fe.c */,
+				OBJ_192 /* ge.c */,
+				OBJ_193 /* key_exchange.c */,
+				OBJ_194 /* keypair.c */,
+				OBJ_195 /* sc.c */,
+				OBJ_196 /* seed.c */,
+				OBJ_197 /* sha512.c */,
+				OBJ_198 /* sign.c */,
+				OBJ_199 /* verify.c */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		OBJ_19 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_20 /* CryptoSwift 1.3.0 */,
+				OBJ_102 /* CCurve25519 1.0.1 */,
+				OBJ_187 /* CEd25519 0.0.6 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_20 /* CryptoSwift 1.3.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_21 /* CryptoSwift */,
+				OBJ_101 /* Package.swift */,
+			);
+			name = "CryptoSwift 1.3.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_200 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_201 /* CEd25519.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		OBJ_203 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"CEd25519::CEd25519::Product" /* CEd25519.framework */,
+				"CryptoKit25519::CryptoKit25519Tests::Product" /* CryptoKit25519Tests.xctest */,
+				"CryptoKit25519::CryptoKit25519::Product" /* CryptoKit25519.framework */,
+				"CCurve25519::CCurve25519::Product" /* CCurve25519.framework */,
+				"CryptoSwift::CryptoSwift::Product" /* CryptoSwift.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_21 /* CryptoSwift */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_22 /* AEAD */,
+				OBJ_25 /* AES.Cryptors.swift */,
+				OBJ_26 /* AES.swift */,
+				OBJ_27 /* Array+Extension.swift */,
+				OBJ_28 /* Authenticator.swift */,
+				OBJ_29 /* BatchedCollection.swift */,
+				OBJ_30 /* Bit.swift */,
+				OBJ_31 /* BlockCipher.swift */,
+				OBJ_32 /* BlockDecryptor.swift */,
+				OBJ_33 /* BlockEncryptor.swift */,
+				OBJ_34 /* BlockMode */,
+				OBJ_46 /* Blowfish.swift */,
+				OBJ_47 /* CBCMAC.swift */,
+				OBJ_48 /* CMAC.swift */,
+				OBJ_49 /* ChaCha20.swift */,
+				OBJ_50 /* Checksum.swift */,
+				OBJ_51 /* Cipher.swift */,
+				OBJ_52 /* Collection+Extension.swift */,
+				OBJ_53 /* CompactMap.swift */,
+				OBJ_54 /* Cryptor.swift */,
+				OBJ_55 /* Cryptors.swift */,
+				OBJ_56 /* Digest.swift */,
+				OBJ_57 /* DigestType.swift */,
+				OBJ_58 /* Foundation */,
+				OBJ_68 /* Generics.swift */,
+				OBJ_69 /* HKDF.swift */,
+				OBJ_70 /* HMAC.swift */,
+				OBJ_71 /* ISO78164Padding.swift */,
+				OBJ_72 /* Int+Extension.swift */,
+				OBJ_73 /* MD5.swift */,
+				OBJ_74 /* NoPadding.swift */,
+				OBJ_75 /* Operators.swift */,
+				OBJ_76 /* PKCS */,
+				OBJ_82 /* Padding.swift */,
+				OBJ_83 /* Poly1305.swift */,
+				OBJ_84 /* Rabbit.swift */,
+				OBJ_85 /* SHA1.swift */,
+				OBJ_86 /* SHA2.swift */,
+				OBJ_87 /* SHA3.swift */,
+				OBJ_88 /* Scrypt.swift */,
+				OBJ_89 /* SecureBytes.swift */,
+				OBJ_90 /* StreamDecryptor.swift */,
+				OBJ_91 /* StreamEncryptor.swift */,
+				OBJ_92 /* String+Extension.swift */,
+				OBJ_93 /* UInt128.swift */,
+				OBJ_94 /* UInt16+Extension.swift */,
+				OBJ_95 /* UInt32+Extension.swift */,
+				OBJ_96 /* UInt64+Extension.swift */,
+				OBJ_97 /* UInt8+Extension.swift */,
+				OBJ_98 /* Updatable.swift */,
+				OBJ_99 /* Utils.swift */,
+				OBJ_100 /* ZeroPadding.swift */,
+			);
+			name = CryptoSwift;
+			path = .build/checkouts/CryptoSwift/Sources/CryptoSwift;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_22 /* AEAD */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_23 /* AEAD.swift */,
+				OBJ_24 /* AEADChaCha20Poly1305.swift */,
+			);
+			path = AEAD;
+			sourceTree = "<group>";
+		};
+		OBJ_34 /* BlockMode */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_35 /* BlockMode.swift */,
+				OBJ_36 /* BlockModeOptions.swift */,
+				OBJ_37 /* CBC.swift */,
+				OBJ_38 /* CCM.swift */,
+				OBJ_39 /* CFB.swift */,
+				OBJ_40 /* CTR.swift */,
+				OBJ_41 /* CipherModeWorker.swift */,
+				OBJ_42 /* ECB.swift */,
+				OBJ_43 /* GCM.swift */,
+				OBJ_44 /* OFB.swift */,
+				OBJ_45 /* PCBC.swift */,
+			);
+			path = BlockMode;
+			sourceTree = "<group>";
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_15 /* Tests */,
+				OBJ_19 /* Dependencies */,
+				OBJ_203 /* Products */,
+				OBJ_209 /* LICENSE */,
+				OBJ_210 /* README.md */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_58 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_59 /* AES+Foundation.swift */,
+				OBJ_60 /* Array+Foundation.swift */,
+				OBJ_61 /* Blowfish+Foundation.swift */,
+				OBJ_62 /* ChaCha20+Foundation.swift */,
+				OBJ_63 /* Data+Extension.swift */,
+				OBJ_64 /* HMAC+Foundation.swift */,
+				OBJ_65 /* Rabbit+Foundation.swift */,
+				OBJ_66 /* String+FoundationExtension.swift */,
+				OBJ_67 /* Utils+Foundation.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* CryptoKit25519 */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_76 /* PKCS */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_77 /* PBKDF1.swift */,
+				OBJ_78 /* PBKDF2.swift */,
+				OBJ_79 /* PKCS5.swift */,
+				OBJ_80 /* PKCS7.swift */,
+				OBJ_81 /* PKCS7Padding.swift */,
+			);
+			path = PKCS;
+			sourceTree = "<group>";
+		};
+		OBJ_8 /* CryptoKit25519 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* Curve25519.swift */,
+				CE1E036623C694C100F15FD3 /* SymmetricKey.swift */,
+				CE1E036323C6936F00F15FD3 /* SharedSecret.swift */,
+				OBJ_10 /* KeyAgreement */,
+				CE1E036923C69AAE00F15FD3 /* Signing */,
+			);
+			name = CryptoKit25519;
+			path = Sources/CryptoKit25519;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		OBJ_289 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_290 /* curve25519-donna.h in Headers */,
+				OBJ_291 /* internal_fast_tests.h in Headers */,
+				OBJ_292 /* CCurve25519.h in Headers */,
+				OBJ_293 /* internal_slow_tests.h in Headers */,
+				OBJ_294 /* curve_sigs.h in Headers */,
+				OBJ_295 /* gen_x.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_318 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_319 /* CEd25519.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		"CCurve25519::CCurve25519" /* CCurve25519 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_212 /* Build configuration list for PBXNativeTarget "CCurve25519" */;
+			buildPhases = (
+				OBJ_215 /* Sources */,
+				OBJ_289 /* Headers */,
+				OBJ_296 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CCurve25519;
+			productName = CCurve25519;
+			productReference = "CCurve25519::CCurve25519::Product" /* CCurve25519.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"CCurve25519::SwiftPMPackageDescription" /* CCurve25519PackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_298 /* Build configuration list for PBXNativeTarget "CCurve25519PackageDescription" */;
+			buildPhases = (
+				OBJ_301 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CCurve25519PackageDescription;
+			productName = CCurve25519PackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"CEd25519::CEd25519" /* CEd25519 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_304 /* Build configuration list for PBXNativeTarget "CEd25519" */;
+			buildPhases = (
+				OBJ_307 /* Sources */,
+				OBJ_318 /* Headers */,
+				OBJ_320 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CEd25519;
+			productName = CEd25519;
+			productReference = "CEd25519::CEd25519::Product" /* CEd25519.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"CEd25519::SwiftPMPackageDescription" /* CEd25519PackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_322 /* Build configuration list for PBXNativeTarget "CEd25519PackageDescription" */;
+			buildPhases = (
+				OBJ_325 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CEd25519PackageDescription;
+			productName = CEd25519PackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"CryptoKit25519::CryptoKit25519" /* CryptoKit25519 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_328 /* Build configuration list for PBXNativeTarget "CryptoKit25519" */;
+			buildPhases = (
+				OBJ_331 /* Sources */,
+				OBJ_337 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_341 /* PBXTargetDependency */,
+				OBJ_343 /* PBXTargetDependency */,
+				OBJ_344 /* PBXTargetDependency */,
+			);
+			name = CryptoKit25519;
+			productName = CryptoKit25519;
+			productReference = "CryptoKit25519::CryptoKit25519::Product" /* CryptoKit25519.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"CryptoKit25519::CryptoKit25519Tests" /* CryptoKit25519Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_357 /* Build configuration list for PBXNativeTarget "CryptoKit25519Tests" */;
+			buildPhases = (
+				OBJ_360 /* Sources */,
+				OBJ_363 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_368 /* PBXTargetDependency */,
+				OBJ_369 /* PBXTargetDependency */,
+				OBJ_370 /* PBXTargetDependency */,
+				OBJ_371 /* PBXTargetDependency */,
+			);
+			name = CryptoKit25519Tests;
+			productName = CryptoKit25519Tests;
+			productReference = "CryptoKit25519::CryptoKit25519Tests::Product" /* CryptoKit25519Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"CryptoKit25519::SwiftPMPackageDescription" /* CryptoKit25519PackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_346 /* Build configuration list for PBXNativeTarget "CryptoKit25519PackageDescription" */;
+			buildPhases = (
+				OBJ_349 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoKit25519PackageDescription;
+			productName = CryptoKit25519PackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"CryptoSwift::CryptoSwift" /* CryptoSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_372 /* Build configuration list for PBXNativeTarget "CryptoSwift" */;
+			buildPhases = (
+				OBJ_375 /* Sources */,
+				OBJ_451 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoSwift;
+			productName = CryptoSwift;
+			productReference = "CryptoSwift::CryptoSwift::Product" /* CryptoSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"CryptoSwift::SwiftPMPackageDescription" /* CryptoSwiftPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_453 /* Build configuration list for PBXNativeTarget "CryptoSwiftPackageDescription" */;
+			buildPhases = (
+				OBJ_456 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoSwiftPackageDescription;
+			productName = CryptoSwiftPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					"CCurve25519::CCurve25519" = {
+						LastSwiftMigration = 1130;
+					};
+				};
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "CryptoKit25519" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_203 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"CCurve25519::CCurve25519" /* CCurve25519 */,
+				"CCurve25519::SwiftPMPackageDescription" /* CCurve25519PackageDescription */,
+				"CEd25519::CEd25519" /* CEd25519 */,
+				"CEd25519::SwiftPMPackageDescription" /* CEd25519PackageDescription */,
+				"CryptoKit25519::CryptoKit25519" /* CryptoKit25519 */,
+				"CryptoKit25519::SwiftPMPackageDescription" /* CryptoKit25519PackageDescription */,
+				"CryptoKit25519::CryptoKit25519PackageTests::ProductTarget" /* CryptoKit25519PackageTests */,
+				"CryptoKit25519::CryptoKit25519Tests" /* CryptoKit25519Tests */,
+				"CryptoSwift::CryptoSwift" /* CryptoSwift */,
+				"CryptoSwift::SwiftPMPackageDescription" /* CryptoSwiftPackageDescription */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_215 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_216 /* blocks.c in Sources */,
+				OBJ_217 /* compare.c in Sources */,
+				OBJ_218 /* curve_sigs.c in Sources */,
+				OBJ_219 /* elligator.c in Sources */,
+				OBJ_220 /* fe_0.c in Sources */,
+				OBJ_221 /* fe_1.c in Sources */,
+				OBJ_222 /* fe_add.c in Sources */,
+				OBJ_223 /* fe_cmov.c in Sources */,
+				OBJ_224 /* fe_copy.c in Sources */,
+				OBJ_225 /* fe_frombytes.c in Sources */,
+				OBJ_226 /* fe_invert.c in Sources */,
+				OBJ_227 /* fe_isequal.c in Sources */,
+				OBJ_228 /* fe_isnegative.c in Sources */,
+				OBJ_229 /* fe_isnonzero.c in Sources */,
+				OBJ_230 /* fe_isreduced.c in Sources */,
+				OBJ_231 /* fe_mont_rhs.c in Sources */,
+				OBJ_232 /* fe_montx_to_edy.c in Sources */,
+				OBJ_233 /* fe_mul.c in Sources */,
+				OBJ_234 /* fe_neg.c in Sources */,
+				OBJ_235 /* fe_pow22523.c in Sources */,
+				OBJ_236 /* fe_sq.c in Sources */,
+				OBJ_237 /* fe_sq2.c in Sources */,
+				OBJ_238 /* fe_sqrt.c in Sources */,
+				OBJ_239 /* fe_sub.c in Sources */,
+				OBJ_240 /* fe_tobytes.c in Sources */,
+				OBJ_241 /* ge_add.c in Sources */,
+				OBJ_242 /* ge_double_scalarmult.c in Sources */,
+				OBJ_243 /* ge_frombytes.c in Sources */,
+				OBJ_244 /* ge_isneutral.c in Sources */,
+				OBJ_245 /* ge_madd.c in Sources */,
+				OBJ_246 /* ge_montx_to_p3.c in Sources */,
+				OBJ_247 /* ge_msub.c in Sources */,
+				OBJ_248 /* ge_neg.c in Sources */,
+				OBJ_249 /* ge_p1p1_to_p2.c in Sources */,
+				OBJ_250 /* ge_p1p1_to_p3.c in Sources */,
+				OBJ_251 /* ge_p2_0.c in Sources */,
+				OBJ_252 /* ge_p2_dbl.c in Sources */,
+				OBJ_253 /* ge_p3_0.c in Sources */,
+				OBJ_254 /* ge_p3_add.c in Sources */,
+				OBJ_255 /* ge_p3_dbl.c in Sources */,
+				OBJ_256 /* ge_p3_to_cached.c in Sources */,
+				OBJ_257 /* ge_p3_to_montx.c in Sources */,
+				OBJ_258 /* ge_p3_to_p2.c in Sources */,
+				OBJ_259 /* ge_p3_tobytes.c in Sources */,
+				OBJ_260 /* ge_precomp_0.c in Sources */,
+				OBJ_261 /* ge_scalarmult.c in Sources */,
+				OBJ_262 /* ge_scalarmult_base.c in Sources */,
+				OBJ_263 /* ge_scalarmult_cofactor.c in Sources */,
+				OBJ_264 /* ge_sub.c in Sources */,
+				OBJ_265 /* ge_tobytes.c in Sources */,
+				OBJ_266 /* gen_eddsa.c in Sources */,
+				OBJ_267 /* gen_labelset.c in Sources */,
+				OBJ_268 /* gen_veddsa.c in Sources */,
+				OBJ_269 /* gen_x.c in Sources */,
+				OBJ_270 /* hash.c in Sources */,
+				OBJ_271 /* internal_fast_tests.c in Sources */,
+				OBJ_272 /* internal_slow_tests.c in Sources */,
+				OBJ_273 /* keygen.c in Sources */,
+				OBJ_274 /* open.c in Sources */,
+				OBJ_275 /* open_modified.c in Sources */,
+				OBJ_276 /* point_isreduced.c in Sources */,
+				OBJ_277 /* sc_clamp.c in Sources */,
+				OBJ_278 /* sc_cmov.c in Sources */,
+				OBJ_279 /* sc_isreduced.c in Sources */,
+				OBJ_280 /* sc_muladd.c in Sources */,
+				OBJ_281 /* sc_neg.c in Sources */,
+				OBJ_282 /* sc_reduce.c in Sources */,
+				OBJ_283 /* sign.c in Sources */,
+				OBJ_284 /* sign_modified.c in Sources */,
+				OBJ_285 /* utility.c in Sources */,
+				OBJ_286 /* xeddsa.c in Sources */,
+				OBJ_287 /* zeroize.c in Sources */,
+				OBJ_288 /* curve25519-donna.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_301 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_302 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_307 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_308 /* add_scalar.c in Sources */,
+				OBJ_309 /* fe.c in Sources */,
+				OBJ_310 /* ge.c in Sources */,
+				OBJ_311 /* key_exchange.c in Sources */,
+				OBJ_312 /* keypair.c in Sources */,
+				OBJ_313 /* sc.c in Sources */,
+				OBJ_314 /* seed.c in Sources */,
+				OBJ_315 /* sha512.c in Sources */,
+				OBJ_316 /* sign.c in Sources */,
+				OBJ_317 /* verify.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_325 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_326 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_331 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				CE1E036823C694F400F15FD3 /* SymmetricKey.swift in Sources */,
+				OBJ_332 /* Curve25519.swift in Sources */,
+				CE1E036F23C69BA200F15FD3 /* SigningPublicKey.swift in Sources */,
+				OBJ_333 /* KeyAgreement.swift in Sources */,
+				CE1E036523C693A900F15FD3 /* SharedSecret.swift in Sources */,
+				OBJ_334 /* PrivateKey.swift in Sources */,
+				OBJ_335 /* PublicKey.swift in Sources */,
+				OBJ_336 /* Signing.swift in Sources */,
+				CE1E036C23C69ADE00F15FD3 /* SigningPrivateKey.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_349 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_350 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_360 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_361 /* Ed25519Tests.swift in Sources */,
+				OBJ_362 /* XCTestManifests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_376 /* AEAD.swift in Sources */,
+				OBJ_377 /* AEADChaCha20Poly1305.swift in Sources */,
+				OBJ_378 /* AES.Cryptors.swift in Sources */,
+				OBJ_379 /* AES.swift in Sources */,
+				OBJ_380 /* Array+Extension.swift in Sources */,
+				OBJ_381 /* Authenticator.swift in Sources */,
+				OBJ_382 /* BatchedCollection.swift in Sources */,
+				OBJ_383 /* Bit.swift in Sources */,
+				OBJ_384 /* BlockCipher.swift in Sources */,
+				OBJ_385 /* BlockDecryptor.swift in Sources */,
+				OBJ_386 /* BlockEncryptor.swift in Sources */,
+				OBJ_387 /* BlockMode.swift in Sources */,
+				OBJ_388 /* BlockModeOptions.swift in Sources */,
+				OBJ_389 /* CBC.swift in Sources */,
+				OBJ_390 /* CCM.swift in Sources */,
+				OBJ_391 /* CFB.swift in Sources */,
+				OBJ_392 /* CTR.swift in Sources */,
+				OBJ_393 /* CipherModeWorker.swift in Sources */,
+				OBJ_394 /* ECB.swift in Sources */,
+				OBJ_395 /* GCM.swift in Sources */,
+				OBJ_396 /* OFB.swift in Sources */,
+				OBJ_397 /* PCBC.swift in Sources */,
+				OBJ_398 /* Blowfish.swift in Sources */,
+				OBJ_399 /* CBCMAC.swift in Sources */,
+				OBJ_400 /* CMAC.swift in Sources */,
+				OBJ_401 /* ChaCha20.swift in Sources */,
+				OBJ_402 /* Checksum.swift in Sources */,
+				OBJ_403 /* Cipher.swift in Sources */,
+				OBJ_404 /* Collection+Extension.swift in Sources */,
+				OBJ_405 /* CompactMap.swift in Sources */,
+				OBJ_406 /* Cryptor.swift in Sources */,
+				OBJ_407 /* Cryptors.swift in Sources */,
+				OBJ_408 /* Digest.swift in Sources */,
+				OBJ_409 /* DigestType.swift in Sources */,
+				OBJ_410 /* AES+Foundation.swift in Sources */,
+				OBJ_411 /* Array+Foundation.swift in Sources */,
+				OBJ_412 /* Blowfish+Foundation.swift in Sources */,
+				OBJ_413 /* ChaCha20+Foundation.swift in Sources */,
+				OBJ_414 /* Data+Extension.swift in Sources */,
+				OBJ_415 /* HMAC+Foundation.swift in Sources */,
+				OBJ_416 /* Rabbit+Foundation.swift in Sources */,
+				OBJ_417 /* String+FoundationExtension.swift in Sources */,
+				OBJ_418 /* Utils+Foundation.swift in Sources */,
+				OBJ_419 /* Generics.swift in Sources */,
+				OBJ_420 /* HKDF.swift in Sources */,
+				OBJ_421 /* HMAC.swift in Sources */,
+				OBJ_422 /* ISO78164Padding.swift in Sources */,
+				OBJ_423 /* Int+Extension.swift in Sources */,
+				OBJ_424 /* MD5.swift in Sources */,
+				OBJ_425 /* NoPadding.swift in Sources */,
+				OBJ_426 /* Operators.swift in Sources */,
+				OBJ_427 /* PBKDF1.swift in Sources */,
+				OBJ_428 /* PBKDF2.swift in Sources */,
+				OBJ_429 /* PKCS5.swift in Sources */,
+				OBJ_430 /* PKCS7.swift in Sources */,
+				OBJ_431 /* PKCS7Padding.swift in Sources */,
+				OBJ_432 /* Padding.swift in Sources */,
+				OBJ_433 /* Poly1305.swift in Sources */,
+				OBJ_434 /* Rabbit.swift in Sources */,
+				OBJ_435 /* SHA1.swift in Sources */,
+				OBJ_436 /* SHA2.swift in Sources */,
+				OBJ_437 /* SHA3.swift in Sources */,
+				OBJ_438 /* Scrypt.swift in Sources */,
+				OBJ_439 /* SecureBytes.swift in Sources */,
+				OBJ_440 /* StreamDecryptor.swift in Sources */,
+				OBJ_441 /* StreamEncryptor.swift in Sources */,
+				OBJ_442 /* String+Extension.swift in Sources */,
+				OBJ_443 /* UInt128.swift in Sources */,
+				OBJ_444 /* UInt16+Extension.swift in Sources */,
+				OBJ_445 /* UInt32+Extension.swift in Sources */,
+				OBJ_446 /* UInt64+Extension.swift in Sources */,
+				OBJ_447 /* UInt8+Extension.swift in Sources */,
+				OBJ_448 /* Updatable.swift in Sources */,
+				OBJ_449 /* Utils.swift in Sources */,
+				OBJ_450 /* ZeroPadding.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_457 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_341 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CryptoSwift::CryptoSwift" /* CryptoSwift */;
+			targetProxy = CE1E035B23C68C7300F15FD3 /* PBXContainerItemProxy */;
+		};
+		OBJ_343 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CCurve25519::CCurve25519" /* CCurve25519 */;
+			targetProxy = CE1E035C23C68C7300F15FD3 /* PBXContainerItemProxy */;
+		};
+		OBJ_344 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CEd25519::CEd25519" /* CEd25519 */;
+			targetProxy = CE1E035D23C68C7300F15FD3 /* PBXContainerItemProxy */;
+		};
+		OBJ_355 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CryptoKit25519::CryptoKit25519Tests" /* CryptoKit25519Tests */;
+			targetProxy = CE1E036223C68C7400F15FD3 /* PBXContainerItemProxy */;
+		};
+		OBJ_368 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CryptoKit25519::CryptoKit25519" /* CryptoKit25519 */;
+			targetProxy = CE1E035E23C68C7300F15FD3 /* PBXContainerItemProxy */;
+		};
+		OBJ_369 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CryptoSwift::CryptoSwift" /* CryptoSwift */;
+			targetProxy = CE1E035F23C68C7300F15FD3 /* PBXContainerItemProxy */;
+		};
+		OBJ_370 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CCurve25519::CCurve25519" /* CCurve25519 */;
+			targetProxy = CE1E036023C68C7300F15FD3 /* PBXContainerItemProxy */;
+		};
+		OBJ_371 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CEd25519::CEd25519" /* CEd25519 */;
+			targetProxy = CE1E036123C68C7300F15FD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_213 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/CCurve25519/Sources/CCurve25519/include",
+				);
+				INFOPLIST_FILE = CryptoKit25519.xcodeproj/CCurve25519_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CCurve25519;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = CCurve25519;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/CCurve25519/Sources/CCurve25519/include",
+				);
+				INFOPLIST_FILE = CryptoKit25519.xcodeproj/CCurve25519_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CCurve25519;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = CCurve25519;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_299 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/CEd25519/Sources/CEd25519/include",
+				);
+				INFOPLIST_FILE = CryptoKit25519.xcodeproj/CEd25519_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CEd25519;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				TARGET_NAME = CEd25519;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/CEd25519/Sources/CEd25519/include",
+				);
+				INFOPLIST_FILE = CryptoKit25519.xcodeproj/CEd25519_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CEd25519;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				TARGET_NAME = CEd25519;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_323 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_324 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_329 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/CCurve25519/Sources/CCurve25519/include",
+					"$(SRCROOT)/.build/checkouts/CEd25519/Sources/CEd25519/include",
+				);
+				INFOPLIST_FILE = CryptoKit25519.xcodeproj/CryptoKit25519_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CryptoKit25519;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = CryptoKit25519;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_330 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/CCurve25519/Sources/CCurve25519/include",
+					"$(SRCROOT)/.build/checkouts/CEd25519/Sources/CEd25519/include",
+				);
+				INFOPLIST_FILE = CryptoKit25519.xcodeproj/CryptoKit25519_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CryptoKit25519;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = CryptoKit25519;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_348 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_353 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_354 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_358 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/CCurve25519/Sources/CCurve25519/include",
+					"$(SRCROOT)/.build/checkouts/CEd25519/Sources/CEd25519/include",
+				);
+				INFOPLIST_FILE = CryptoKit25519.xcodeproj/CryptoKit25519Tests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = CryptoKit25519Tests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_359 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/CCurve25519/Sources/CCurve25519/include",
+					"$(SRCROOT)/.build/checkouts/CEd25519/Sources/CEd25519/include",
+				);
+				INFOPLIST_FILE = CryptoKit25519.xcodeproj/CryptoKit25519Tests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = CryptoKit25519Tests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CryptoKit25519.xcodeproj/CryptoSwift_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CryptoSwift;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = CryptoSwift;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CryptoKit25519.xcodeproj/CryptoSwift_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CryptoSwift;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = CryptoSwift;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_454 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_455 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "CryptoKit25519" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_212 /* Build configuration list for PBXNativeTarget "CCurve25519" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_213 /* Debug */,
+				OBJ_214 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_298 /* Build configuration list for PBXNativeTarget "CCurve25519PackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_299 /* Debug */,
+				OBJ_300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_304 /* Build configuration list for PBXNativeTarget "CEd25519" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_305 /* Debug */,
+				OBJ_306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_322 /* Build configuration list for PBXNativeTarget "CEd25519PackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_323 /* Debug */,
+				OBJ_324 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_328 /* Build configuration list for PBXNativeTarget "CryptoKit25519" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_329 /* Debug */,
+				OBJ_330 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_346 /* Build configuration list for PBXNativeTarget "CryptoKit25519PackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_347 /* Debug */,
+				OBJ_348 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_352 /* Build configuration list for PBXAggregateTarget "CryptoKit25519PackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_353 /* Debug */,
+				OBJ_354 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_357 /* Build configuration list for PBXNativeTarget "CryptoKit25519Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_358 /* Debug */,
+				OBJ_359 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_372 /* Build configuration list for PBXNativeTarget "CryptoSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_373 /* Debug */,
+				OBJ_374 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_453 /* Build configuration list for PBXNativeTarget "CryptoSwiftPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_454 /* Debug */,
+				OBJ_455 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
