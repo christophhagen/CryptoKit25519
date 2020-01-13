@@ -21,7 +21,7 @@ public struct SymmetricKey {
     }
     
     /// The number of bits in the key.
-    var bitCount: Int {
+    public var bitCount: Int {
         return bytes.count * 8
     }
 }

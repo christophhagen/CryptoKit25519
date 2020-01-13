@@ -66,7 +66,7 @@ public extension Curve25519.KeyAgreement {
          - Returns: The computed shared secret.
          - Throws: `Curve25519Error.keyAgreementFailed`
          */
-        func sharedSecretFromKeyAgreement(with publicKeyShare: Curve25519.KeyAgreement.PublicKey) throws -> SharedSecret {
+        public func sharedSecretFromKeyAgreement(with publicKeyShare: Curve25519.KeyAgreement.PublicKey) throws -> SharedSecret {
             
             var sharedKey = [UInt8](repeating: 0, count: Curve25519.keyLength)
             let result: Int32 = sharedKey.withUnsafeMutableBytes { s in
