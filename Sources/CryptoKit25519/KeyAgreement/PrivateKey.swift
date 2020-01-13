@@ -14,6 +14,8 @@ public extension Curve25519.KeyAgreement {
     /// A Curve25519 private key used to create cryptographic signatures.
     struct PrivateKey {
         
+        private static let basepoint = [9] + Data(repeating: 0, count: 31)
+        
         /// The key bytes
         private let bytes: [UInt8]
         
@@ -47,11 +49,17 @@ public extension Curve25519.KeyAgreement {
         private var publicKeyBytes: [UInt8] {
             var pubBuffer = [UInt8](repeating: 0, count: Curve25519.keyLength)
             
-            bytes.withUnsafeBufferPointer { priv in
-                pubBuffer.withUnsafeMutableBufferPointer { pub in
-                    ed25519_create_public_key(pub.baseAddress, priv.baseAddress)
+            let _: Int32 = pubBuffer.withUnsafeMutableBytes { keyPtr in
+                bytes.withUnsafeBytes { privPtr in
+                    Curve25519.KeyAgreement.PrivateKey.basepoint.withUnsafeBytes {
+                        curve25519_donna(
+                            keyPtr.baseAddress!.assumingMemoryBound(to: UInt8.self),
+                            privPtr.baseAddress!.assumingMemoryBound(to: UInt8.self),
+                            $0.baseAddress!.assumingMemoryBound(to: UInt8.self))
+                    }
                 }
             }
+            
             return pubBuffer
         }
         
@@ -69,13 +77,13 @@ public extension Curve25519.KeyAgreement {
         public func sharedSecretFromKeyAgreement(with publicKeyShare: Curve25519.KeyAgreement.PublicKey) throws -> SharedSecret {
             
             var sharedKey = [UInt8](repeating: 0, count: Curve25519.keyLength)
-            let result: Int32 = sharedKey.withUnsafeMutableBytes { s in
-                bytes.withUnsafeBytes { d in
-                    publicKey.bytes.withUnsafeBytes { k in
+            let result: Int32 = sharedKey.withUnsafeMutableBytes { key in
+                bytes.withUnsafeBytes { priv in
+                    publicKeyShare.bytes.withUnsafeBytes { pub in
                         curve25519_donna(
-                            s.bindMemory(to: UInt8.self).baseAddress,
-                            d.bindMemory(to: UInt8.self).baseAddress,
-                            k.bindMemory(to: UInt8.self).baseAddress)
+                            key.bindMemory(to: UInt8.self).baseAddress,
+                            priv.bindMemory(to: UInt8.self).baseAddress,
+                            pub.bindMemory(to: UInt8.self).baseAddress)
                     }
                 }
             }
