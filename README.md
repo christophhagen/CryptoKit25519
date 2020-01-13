@@ -1,5 +1,5 @@
 # CryptoKit25519
-A Swift module for Curve25519 functions compatible with Apple's CryptoKit.
+A Swift module for Curve25519 functions and AES-GCM encryption compatible with Apple's CryptoKit.
 
 ## Purpose
 
@@ -10,7 +10,7 @@ This module provides signatures and key agreement based on Curve25519 in Swift. 
 When using the Swift Package Manager, specify in `Package.swift`:
 
 ````swift
-.package(url: "https://github.com/christophhagen/CryptoKit25519", from: "0.3.1")
+.package(url: "https://github.com/christophhagen/CryptoKit25519", from: "0.4.0")
 ````
 
 Then, in your source files, simply:
@@ -21,7 +21,30 @@ import CryptoKit25519
 
 ## Usage
 
-The library is split into two main parts, `Signing` and `KeyAgreement`.
+This library is built to be *very* similar to Apple's [`CryptoKit`](https://developer.apple.com/documentation/cryptokit) framework, so much of the documentation there also applies to this `CryptoKit25519`. Notable differences are:
+- Operations are NOT constant-time. 
+- Sensitive keys are NOT immediately zeroized after use.
+
+Currently supported operations:
+- Signatures with Curve25519 (No support for P521, P384, or P256)
+- Key Agreement with Curve25519 (No support for P521, P384, or P256)
+- Encryption with AES-GCM (No support for ChaChaPoly)
+
+### Randomness
+
+`CryptoKit25519` provides no source of cryptographically secure random numbers. This source must be provided before ANY of the following operations are performed:
+- `Curve25519.Signing.PrivateKey()`
+- `Curve25519.KeyAgreement.PrivateKey()`
+- `SymmetricKey(size:)`
+- `AES.GCM.Nonce()`
+- `AES.GCM.seal(_:key:nonce:authenticating)`
+
+You can provide random numbers by setting `Randomness.source`:
+````swift
+Randomness.source = { count in
+    return ... // Return `count` random bytes, or nil, if no randomness is available.
+}
+````
 
 ### Signing
 
@@ -32,15 +55,7 @@ Signing is part of public-key cryptography. Private keys can create signatures o
 When creating a signature, a private key is needed:
 
 ````swift
-let privateKey = Curve25519.PrivateKey()
-````
-
-In order to use `PrivateKey()`, a source of randomness must be set:
-
-````swift
-Ed25519.randomnessSource = { count in
-    return ... // Return `count` random bytes, or nil, if no randomness is available.
-}
+let privateKey = Curve25519.Signing.PrivateKey()
 ````
 
 When the key is already available:
@@ -67,7 +82,7 @@ let publicKey = privateKey.publicKey
 Or, when the public key is available as data:
 
 ````swift
-let publicKey = try Ed25519.PublicKey(rawRepresentation: data)
+let publicKey = try Curve25519.Signing.PublicKey(rawRepresentation: data)
 ````
 
 Public keys can be converted to data:
@@ -100,6 +115,10 @@ Users can exchange public keys in order to establish a shared secret.
 
 The creation of private keys is analogous to the signature case above.
 
+````swift
+let privateKey = Curve25519.KeyAgreement.PrivateKey()
+````
+
 #### Calculating shared secrets
 
 Shared secrets can be calculated by both parties, using their private key together with the received public key.
@@ -127,6 +146,28 @@ let key = try secret.hkdfDerivedSymmetricKey(
             
 // Access the raw data
 let data: Data = key.rawData
+````
+
+## Encryption
+
+`CryptoKit25519` supports `AES` in `GCM`(Galois Counter Mode).
+
+### Encrypting data
+
+````swift
+let sealedBox = try AES.GCM.seal(message, using: key)
+````
+
+It's also possible to provide a custom nonce, and additional data to be authenticated.
+
+````swift
+let sealedBox = try AES.GCM.seal(message, using: key, nonce: AES.GCM.Nonce(), authenticating: authenticatedData)
+````
+
+### Decrypting data
+
+````swift
+let plaintext = try AES.GCM.open(sealedBox, using: key)
 ````
 
 ## Attribution
