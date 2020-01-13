@@ -22,11 +22,11 @@ public extension Curve25519.Signing {
         /**
          Creates a Curve25519 public key from a data representation.
          - Parameter rawRepresentation: A representation of the key as data from which to create the key.
-         - Throws: `Curve25519Error.invalidKeyLength`, if the key length is not `Curve25519.keyLength`.
+         - Throws: `CryptoKitError.invalidKeyLength`, if the key length is not `Curve25519.keyLength`.
           */
          public init(rawRepresentation: Data) throws {
              guard rawRepresentation.count == Curve25519.keyLength else {
-                throw Curve25519.Curve25519Error.invalidKeyLength
+                throw CryptoKitError.invalidKeyLength
              }
              self.bytes = [UInt8](rawRepresentation)
         }

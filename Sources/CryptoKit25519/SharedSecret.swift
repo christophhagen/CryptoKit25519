@@ -27,6 +27,7 @@ public struct SharedSecret {
      - Parameter sharedInfo: The shared information to use for key derivation.
      - Parameter outputByteCount: The length in bytes of resulting symmetric key.
      - Returns: The derived symmetric key.
+     - Throws: `CryptoKitError.keyDerivationFailed`
      */
     public func hkdfDerivedSymmetricKey(using hashFunction: CryptoSwift.HMAC.Variant, salt: Data, sharedInfo: Data, outputByteCount: Int) throws -> SymmetricKey {
         
@@ -38,7 +39,7 @@ public struct SharedSecret {
                                   variant: hashFunction).calculate()
             return SymmetricKey(bytes: secret)
         } catch {
-            throw Curve25519.Curve25519Error.keyDerivationFailed
+            throw CryptoKitError.keyDerivationFailed
         }
     }
     
@@ -48,7 +49,4 @@ public struct SharedSecret {
     }
 }
 
-extension SharedSecret: Equatable, Hashable {
-    
-    
-}
+extension SharedSecret: Equatable, Hashable { }

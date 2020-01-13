@@ -18,7 +18,7 @@ public extension Curve25519.Signing {
         
         /**
          Creates a random Curve25519 private key for signing.
-         - Throws: `Curve25519Error.noRandomnessSource`, `Curve25519Error.noRandomnessAvailable`
+         - Throws: `CryptoKitError.noRandomnessSource`, `CryptoKitError.noRandomnessAvailable`
          */
         public init() throws {
             self.init(bytes: try Curve25519.newKeyBytes())
@@ -27,12 +27,12 @@ public extension Curve25519.Signing {
         /**
          Creates a Curve25519 private key for signing from a data representation.
          - Parameter rawRepresentation: A raw representation of the key as data.
-         - Throws: `Curve25519Error.invalidKeyLength`, if the key length is not `Curve25519.keyLength`.
+         - Throws: `CryptoKitError.invalidKeyLength`, if the key length is not `Curve25519.keyLength`.
          - Note: If the key has invalid bytes, the key will be automatically corrected. When this happens, then `privateKey.rawRepresentation` will differ from the original input.
          */
         public init(rawRepresentation: Data) throws {
             guard rawRepresentation.count == Curve25519.keyLength else {
-                throw Curve25519.Curve25519Error.invalidKeyLength
+                throw CryptoKitError.invalidKeyLength
             }
             self.init(bytes: [UInt8](rawRepresentation))
         }

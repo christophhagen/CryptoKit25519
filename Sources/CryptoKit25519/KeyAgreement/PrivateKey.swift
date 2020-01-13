@@ -19,7 +19,7 @@ public extension Curve25519.KeyAgreement {
         
         /**
          Creates a random Curve25519 private key for key agreement.
-         - Throws: `Curve25519Error.noRandomnessSource`, `Curve25519Error.noRandomnessAvailable`
+         - Throws: `CryptoKitError.noRandomnessSource`, `CryptoKitError.noRandomnessAvailable`
          */
         public init() throws {
             self.bytes = try Curve25519.newKeyBytes()
@@ -28,11 +28,11 @@ public extension Curve25519.KeyAgreement {
         /**
          Creates a Curve25519 private key for key agreement from a collection of bytes.
          - Parameter rawRepresentation: A raw representation of the key as data.
-         - Throws: `Curve25519Error.invalidKeyLength`, if the key length is not `Curve25519.keyLength`.
+         - Throws: `CryptoKitError.invalidKeyLength`, if the key length is not `Curve25519.keyLength`.
          */
         public init(rawRepresentation: Data) throws {
             guard rawRepresentation.count == Curve25519.keyLength else {
-                throw Curve25519.Curve25519Error.invalidKeyLength
+                throw CryptoKitError.invalidKeyLength
             }
             self.bytes = [UInt8](rawRepresentation)
         }
@@ -64,7 +64,7 @@ public extension Curve25519.KeyAgreement {
          Computes a shared secret with the provided public key from another party.
          - Parameter publicKeyShare: The public key from another party to be combined with the private key from this user to create the shared secret.
          - Returns: The computed shared secret.
-         - Throws: `Curve25519Error.keyAgreementFailed`
+         - Throws: `CryptoKitError.keyAgreementFailed`
          */
         public func sharedSecretFromKeyAgreement(with publicKeyShare: Curve25519.KeyAgreement.PublicKey) throws -> SharedSecret {
             
@@ -80,7 +80,7 @@ public extension Curve25519.KeyAgreement {
                 }
             }
             guard result == 0 else {
-                throw Curve25519.Curve25519Error.keyAgreementFailed
+                throw CryptoKitError.keyAgreementFailed
             }
             return SharedSecret(bytes: sharedKey)
         }

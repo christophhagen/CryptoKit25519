@@ -25,6 +25,12 @@
 		CE1E036823C694F400F15FD3 /* SymmetricKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E036623C694C100F15FD3 /* SymmetricKey.swift */; };
 		CE1E036C23C69ADE00F15FD3 /* SigningPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E036A23C69AD800F15FD3 /* SigningPrivateKey.swift */; };
 		CE1E036F23C69BA200F15FD3 /* SigningPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E036D23C69B3400F15FD3 /* SigningPublicKey.swift */; };
+		CE8A488323CCA5850097D974 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A488123CCA42C0097D974 /* AES.swift */; };
+		CE8A488623CCA8BE0097D974 /* Randomness.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A488423CCA8880097D974 /* Randomness.swift */; };
+		CE8A488923CCAC180097D974 /* CryptoKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A488723CCAC140097D974 /* CryptoKitError.swift */; };
+		CE8A488D23CCB0650097D974 /* GCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A488B23CCB0610097D974 /* GCM.swift */; };
+		CE8A489023CCB0990097D974 /* Nonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A488E23CCB0960097D974 /* Nonce.swift */; };
+		CE8A489323CCB0CE0097D974 /* SealedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A489123CCB0CB0097D974 /* SealedBox.swift */; };
 		OBJ_216 /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* blocks.c */; };
 		OBJ_217 /* compare.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_107 /* compare.c */; };
 		OBJ_218 /* curve_sigs.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_108 /* curve_sigs.c */; };
@@ -126,7 +132,7 @@
 		OBJ_339 /* CCurve25519.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CCurve25519::CCurve25519::Product" /* CCurve25519.framework */; };
 		OBJ_340 /* CEd25519.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CEd25519::CEd25519::Product" /* CEd25519.framework */; };
 		OBJ_350 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_361 /* Ed25519Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Ed25519Tests.swift */; };
+		OBJ_361 /* CryptoKit25519Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* CryptoKit25519Tests.swift */; };
 		OBJ_362 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* XCTestManifests.swift */; };
 		OBJ_364 /* CryptoKit25519.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CryptoKit25519::CryptoKit25519::Product" /* CryptoKit25519.framework */; };
 		OBJ_365 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CryptoSwift::CryptoSwift::Product" /* CryptoSwift.framework */; };
@@ -275,6 +281,12 @@
 		CE1E036623C694C100F15FD3 /* SymmetricKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymmetricKey.swift; sourceTree = "<group>"; };
 		CE1E036A23C69AD800F15FD3 /* SigningPrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningPrivateKey.swift; sourceTree = "<group>"; };
 		CE1E036D23C69B3400F15FD3 /* SigningPublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningPublicKey.swift; sourceTree = "<group>"; };
+		CE8A488123CCA42C0097D974 /* AES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
+		CE8A488423CCA8880097D974 /* Randomness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Randomness.swift; sourceTree = "<group>"; };
+		CE8A488723CCAC140097D974 /* CryptoKitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoKitError.swift; sourceTree = "<group>"; };
+		CE8A488B23CCB0610097D974 /* GCM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCM.swift; sourceTree = "<group>"; };
+		CE8A488E23CCB0960097D974 /* Nonce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nonce.swift; sourceTree = "<group>"; };
+		CE8A489123CCB0CB0097D974 /* SealedBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SealedBox.swift; sourceTree = "<group>"; };
 		"CEd25519::CEd25519::Product" /* CEd25519.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CEd25519.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CryptoKit25519::CryptoKit25519::Product" /* CryptoKit25519.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoKit25519.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CryptoKit25519::CryptoKit25519Tests::Product" /* CryptoKit25519Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CryptoKit25519Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -349,7 +361,7 @@
 		OBJ_167 /* sc_clamp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sc_clamp.c; sourceTree = "<group>"; };
 		OBJ_168 /* sc_cmov.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sc_cmov.c; sourceTree = "<group>"; };
 		OBJ_169 /* sc_isreduced.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sc_isreduced.c; sourceTree = "<group>"; };
-		OBJ_17 /* Ed25519Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ed25519Tests.swift; sourceTree = "<group>"; };
+		OBJ_17 /* CryptoKit25519Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoKit25519Tests.swift; sourceTree = "<group>"; };
 		OBJ_170 /* sc_muladd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sc_muladd.c; sourceTree = "<group>"; };
 		OBJ_171 /* sc_neg.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sc_neg.c; sourceTree = "<group>"; };
 		OBJ_172 /* sc_reduce.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sc_reduce.c; sourceTree = "<group>"; };
@@ -515,6 +527,17 @@
 			path = Signing;
 			sourceTree = "<group>";
 		};
+		CE8A488A23CCB0520097D974 /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				CE8A488123CCA42C0097D974 /* AES.swift */,
+				CE8A488B23CCB0610097D974 /* GCM.swift */,
+				CE8A488E23CCB0960097D974 /* Nonce.swift */,
+				CE8A489123CCB0CB0097D974 /* SealedBox.swift */,
+			);
+			path = Encryption;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* KeyAgreement */ = {
 			isa = PBXGroup;
 			children = (
@@ -643,7 +666,7 @@
 		OBJ_16 /* CryptoKit25519Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_17 /* Ed25519Tests.swift */,
+				OBJ_17 /* CryptoKit25519Tests.swift */,
 				OBJ_18 /* XCTestManifests.swift */,
 			);
 			name = CryptoKit25519Tests;
@@ -825,7 +848,7 @@
 			path = BlockMode;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -836,7 +859,6 @@
 				OBJ_209 /* LICENSE */,
 				OBJ_210 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_58 /* Foundation */ = {
@@ -878,9 +900,12 @@
 		OBJ_8 /* CryptoKit25519 */ = {
 			isa = PBXGroup;
 			children = (
+				CE8A488723CCAC140097D974 /* CryptoKitError.swift */,
 				OBJ_9 /* Curve25519.swift */,
+				CE8A488423CCA8880097D974 /* Randomness.swift */,
 				CE1E036623C694C100F15FD3 /* SymmetricKey.swift */,
 				CE1E036323C6936F00F15FD3 /* SharedSecret.swift */,
+				CE8A488A23CCB0520097D974 /* Encryption */,
 				OBJ_10 /* KeyAgreement */,
 				CE1E036923C69AAE00F15FD3 /* Signing */,
 			);
@@ -1081,7 +1106,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_203 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1220,13 +1245,19 @@
 			files = (
 				CE1E036823C694F400F15FD3 /* SymmetricKey.swift in Sources */,
 				OBJ_332 /* Curve25519.swift in Sources */,
+				CE8A488923CCAC180097D974 /* CryptoKitError.swift in Sources */,
+				CE8A488623CCA8BE0097D974 /* Randomness.swift in Sources */,
 				CE1E036F23C69BA200F15FD3 /* SigningPublicKey.swift in Sources */,
+				CE8A489023CCB0990097D974 /* Nonce.swift in Sources */,
 				OBJ_333 /* KeyAgreement.swift in Sources */,
 				CE1E036523C693A900F15FD3 /* SharedSecret.swift in Sources */,
 				OBJ_334 /* PrivateKey.swift in Sources */,
 				OBJ_335 /* PublicKey.swift in Sources */,
 				OBJ_336 /* Signing.swift in Sources */,
+				CE8A488D23CCB0650097D974 /* GCM.swift in Sources */,
+				CE8A489323CCB0CE0097D974 /* SealedBox.swift in Sources */,
 				CE1E036C23C69ADE00F15FD3 /* SigningPrivateKey.swift in Sources */,
+				CE8A488323CCA5850097D974 /* AES.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1242,7 +1273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_361 /* Ed25519Tests.swift in Sources */,
+				OBJ_361 /* CryptoKit25519Tests.swift in Sources */,
 				OBJ_362 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
