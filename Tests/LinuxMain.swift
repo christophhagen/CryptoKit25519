@@ -1,7 +1,7 @@
 import XCTest
 
-import Ed25519Tests
+import CryptoKit25519Tests
 
 var tests = [XCTestCaseEntry]()
-tests += Ed25519Tests.allTests()
+tests += CryptoKit25519Tests.allTests()
 XCTMain(tests)

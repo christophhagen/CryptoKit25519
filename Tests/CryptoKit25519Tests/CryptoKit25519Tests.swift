@@ -1,7 +1,7 @@
 import XCTest
-@testable import Ed25519
+@testable import CryptoKit25519
 
-final class Ed25519Tests: XCTestCase {
+final class CryptoKit25519Tests: XCTestCase {
 
     func testSignature() throws {
         let seed = try Seed()
