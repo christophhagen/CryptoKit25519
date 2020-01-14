@@ -52,3 +52,7 @@ public extension AES.GCM {
     }
     
 }
+
+extension AES.GCM.Nonce: Hashable {
+    
+}

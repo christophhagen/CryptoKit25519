@@ -42,3 +42,7 @@ public extension Curve25519.KeyAgreement {
         
     }
 }
+
+extension Curve25519.KeyAgreement.PublicKey: Hashable {
+    
+}

@@ -65,3 +65,7 @@ public extension Curve25519.Signing {
         }
     }
 }
+
+extension Curve25519.Signing.PublicKey: Hashable {
+    
+}
