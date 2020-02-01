@@ -17,7 +17,13 @@ public enum Curve25519 {
      - Throws: `CryptoKitError.noRandomnessSource`, `CryptoKitError.noRandomnessAvailable`
      - Returns: 32 new random bytes.
      */
-    static func newKeyBytes() throws -> [UInt8] {
-        return try Randomness.randomBytes(count: keyLength).bytes
+    static func newNormalizedKey() throws -> [UInt8] {
+        var data = try Randomness.randomBytes(count: keyLength).bytes
+        
+        data[0] &= 0xf8
+        data[31] &= 0x3f
+        data[31] |= 0x40
+        
+        return data
     }
 }

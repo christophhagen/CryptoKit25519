@@ -24,7 +24,7 @@ public extension Curve25519.KeyAgreement {
          - Throws: `CryptoKitError.noRandomnessSource`, `CryptoKitError.noRandomnessAvailable`
          */
         public init() throws {
-            self.bytes = try Curve25519.newKeyBytes()
+            self.bytes = try Curve25519.newNormalizedKey()
         }
         
         /**
