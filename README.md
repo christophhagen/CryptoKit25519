@@ -33,7 +33,7 @@ Currently supported operations:
 
 ### Randomness
 
-`CryptoKit25519` provides no source of cryptographically secure random numbers. This source must be provided before ANY of the following operations are performed:
+`CryptoKit25519` requires a source of cryptographically secure random numbers to generate keys. On supported platforms (iOS 2.0+, macOS 10.7+, tvOS 9.0+, watchOS 2.0+, macCatalyst 13.0+) [SecCopyRandomBytes](https://developer.apple.com/documentation/security/1399291-secrandomcopybytes) is used as the default. On other platforms, this source MUST be provided before any of the following operations are performed:
 - `Curve25519.Signing.PrivateKey()`
 - `Curve25519.KeyAgreement.PrivateKey()`
 - `SymmetricKey(size:)`
