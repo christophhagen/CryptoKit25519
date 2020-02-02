@@ -13,15 +13,21 @@ public extension Curve25519.Signing {
     /// A Curve25519 private key used to create cryptographic signatures.
     struct PrivateKey {
         
-        /// The key (32 bytes)
         private let bytes: [UInt8]
+        
+        /// The key (32 bytes)
+        private let privateKeyBytes: [UInt8]
+        
+        /// The public key bytes
+        private let publicKeyBytes: [UInt8]
         
         /**
          Creates a random Curve25519 private key for signing.
          - Throws: `CryptoKitError.noRandomnessSource`, `CryptoKitError.noRandomnessAvailable`
          */
         public init() throws {
-            self.bytes = try Curve25519.newNormalizedKey()
+            let seed = try Curve25519.newKey()
+            self.init(bytes: seed)
         }
         
         /**
@@ -33,25 +39,32 @@ public extension Curve25519.Signing {
             guard rawRepresentation.count == Curve25519.keyLength else {
                 throw CryptoKitError.invalidKeyLength
             }
-            self.bytes = [UInt8](rawRepresentation)
+            self.init(bytes: Array(rawRepresentation))
+        }
+        
+        public init(bytes: [UInt8]) {
+            var pub = [UInt8](repeating: 0, count: 32)
+            var priv = [UInt8](repeating: 0, count: 32)
+            pub.withUnsafeMutableBufferPointer { pP in
+                priv.withUnsafeMutableBufferPointer { sP in
+                    bytes.withUnsafeBytes { s in
+                        ed25519_create_keypair(
+                            pP.baseAddress,
+                            sP.baseAddress,
+                            s.bindMemory(to: UInt8.self).baseAddress)
+                    }
+                }
+            }
+            
+            self.bytes = bytes
+            self.privateKeyBytes = priv
+            self.publicKeyBytes = pub
         }
         
         /// The corresponding public key.
         public var publicKey: Curve25519.Signing.PublicKey {
             // Length is valid, so no error can be thrown.
             return PublicKey(bytes: publicKeyBytes)
-        }
-        
-        /// The raw bytes of the corresponding public key.
-        private var publicKeyBytes: [UInt8] {
-            var pubBuffer = [UInt8](repeating: 0, count: Curve25519.keyLength)
-            
-            bytes.withUnsafeBufferPointer { priv in
-                pubBuffer.withUnsafeMutableBufferPointer { pub in
-                    ed25519_create_public_key(pub.baseAddress, priv.baseAddress)
-                }
-            }
-            return pubBuffer
         }
         
         /**
@@ -61,12 +74,11 @@ public extension Curve25519.Signing {
          */
         public func signature(for data: Data) -> Data {
             var signature = [UInt8](repeating: 0, count: 64)
-            let publicKey = publicKeyBytes
             
-            signature.withUnsafeMutableBufferPointer { signature in
-                publicKey.withUnsafeBufferPointer { pub in
-                    data.withUnsafeBytes { msg in
-                        bytes.withUnsafeBufferPointer { priv in
+            privateKeyBytes.withUnsafeBufferPointer { priv in
+                signature.withUnsafeMutableBufferPointer { signature in
+                    publicKeyBytes.withUnsafeBufferPointer { pub in
+                        data.withUnsafeBytes { msg in
                             ed25519_sign(signature.baseAddress,
                                          msg.bindMemory(to: UInt8.self).baseAddress,
                                          data.count,

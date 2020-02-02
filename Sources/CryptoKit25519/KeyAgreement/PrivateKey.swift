@@ -24,7 +24,7 @@ public extension Curve25519.KeyAgreement {
          - Throws: `CryptoKitError.noRandomnessSource`, `CryptoKitError.noRandomnessAvailable`
          */
         public init() throws {
-            self.bytes = try Curve25519.newNormalizedKey()
+            self.bytes = try Curve25519.newKey().normalized
         }
         
         /**
@@ -50,7 +50,7 @@ public extension Curve25519.KeyAgreement {
             var pubBuffer = [UInt8](repeating: 0, count: Curve25519.keyLength)
             
             let _: Int32 = pubBuffer.withUnsafeMutableBytes { keyPtr in
-                bytes.withUnsafeBytes { privPtr in
+                bytes.normalized.withUnsafeBytes { privPtr in
                     Curve25519.KeyAgreement.PrivateKey.basepoint.withUnsafeBytes {
                         curve25519_donna(
                             keyPtr.baseAddress!.assumingMemoryBound(to: UInt8.self),

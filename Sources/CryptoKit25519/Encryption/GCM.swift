@@ -34,7 +34,7 @@ public extension AES {
             
             let ciphertext: [UInt8]
             do {
-                let cryptor = try CryptoSwift.AES(key: key.bytes, blockMode: gcm, padding: .pkcs7)
+                let cryptor = try CryptoSwift.AES(key: key.bytes, blockMode: gcm, padding: .noPadding)
                 ciphertext = try cryptor.encrypt(message.bytes)
             } catch {
                 throw CryptoKitError.encryptionFailed
@@ -60,7 +60,7 @@ public extension AES {
                 additionalAuthenticatedData: authenticatedData?.bytes)
             let plaintext: [UInt8]
             do {
-                let cryptor = try CryptoSwift.AES(key: key.bytes, blockMode: gcm, padding: .pkcs7)
+                let cryptor = try CryptoSwift.AES(key: key.bytes, blockMode: gcm, padding: .noPadding)
                 plaintext = try cryptor.decrypt(sealedBox.ciphertext.bytes)
             } catch {
                 throw CryptoKitError.decryptionFailed
