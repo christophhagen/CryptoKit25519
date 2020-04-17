@@ -30,6 +30,8 @@ Currently supported operations:
 - Key Agreement with Curve25519 (No support for P521, P384, or P256)
 - Encryption with AES-GCM (No support for ChaChaPoly)
 
+If you need additional operations, have a look at [OpenCrypto](https://github.com/vapor/open-crypto).
+
 ### Randomness
 
 `CryptoKit25519` requires a source of cryptographically secure random numbers to generate keys. On supported platforms (iOS 2.0+, macOS 10.7+, tvOS 9.0+, watchOS 2.0+, macCatalyst 13.0+) [SecCopyRandomBytes](https://developer.apple.com/documentation/security/1399291-secrandomcopybytes) is used as the default. On other platforms, this source MUST be provided before any of the following operations are performed:
