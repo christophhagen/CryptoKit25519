@@ -43,22 +43,42 @@ public extension Curve25519.Signing {
         }
         
         public init(bytes: [UInt8]) {
-            var pub = [UInt8](repeating: 0, count: 32)
-            var priv = [UInt8](repeating: 0, count: 32)
-            pub.withUnsafeMutableBufferPointer { pP in
-                priv.withUnsafeMutableBufferPointer { sP in
-                    bytes.withUnsafeBytes { s in
-                        ed25519_create_keypair(
-                            pP.baseAddress,
-                            sP.baseAddress,
-                            s.bindMemory(to: UInt8.self).baseAddress)
-                    }
+            let (priv, pub) = bytes.withUnsafeBytes { srcRawBufferPointer -> (Data, Data) in
+                var priv = Data()
+                var pub = Data()
+                let privPointer = UnsafeMutablePointer<UInt8>.allocate(capacity: Curve25519.keyLength)
+                let pubPointer = UnsafeMutablePointer<UInt8>.allocate(capacity: Curve25519.keyLength)
+                defer {
+                    privPointer.deallocate()
+                    pubPointer.deallocate()
                 }
+                
+                let srcBufferPointer = srcRawBufferPointer.bindMemory(to: UInt8.self)
+                
+                guard let srcPointer = srcBufferPointer.baseAddress else {
+                  fatalError("Failed to get base address of source bytes")
+                }
+                ed25519_create_keypair(pubPointer, privPointer, srcPointer)
+                priv.append(privPointer, count: Curve25519.keyLength)
+                pub.append(pubPointer, count: Curve25519.keyLength)
+                return (priv, pub)
             }
-            
+//            var pub = [UInt8](repeating: 0, count: 32)
+//            var priv = [UInt8](repeating: 0, count: 32)
+//            pub.withUnsafeMutableBufferPointer { pP in
+//                priv.withUnsafeMutableBufferPointer { sP in
+//                    bytes.withUnsafeBytes { s in
+//                        ed25519_create_keypair(
+//                            pP.baseAddress,
+//                            sP.baseAddress,
+//                            s.bindMemory(to: UInt8.self).baseAddress)
+//                    }
+//                }
+//            }
+//
             self.bytes = bytes
-            self.privateKeyBytes = priv
-            self.publicKeyBytes = pub
+            self.privateKeyBytes = [UInt8](priv)
+            self.publicKeyBytes = [UInt8](pub)
         }
         
         /// The corresponding public key.
