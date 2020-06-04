@@ -7,7 +7,7 @@
 #if os(Linux)
 import SwiftGlibc
 #else
-import Darwin
+import Foundation
 #endif
 
 public enum Randomness {
@@ -26,25 +26,17 @@ public enum Randomness {
      - Parameter count: The number of bytes to generate
      - Returns: The random bytes, or nil, if no random data is available.
      */
-    public static var source: ((_ count: Int) -> Data?)?
+    public static var source: ((_ count: Int) -> [UInt8]?)?
     
     /**
      Create new random bytes.
      - Throws: `CryptoKitError.noRandomnessSource`, `CryptoKitError.noRandomnessAvailable`
      - Returns: The new random bytes.
      */
-    static func randomBytes(count: Int) throws -> Data {
+    static func randomBytes(count: Int) throws -> [UInt8] {
         // Use custom randomness source
         guard let randomBytes = Randomness.source else {
-            #if os(Linux)
-                return randomLinux(count)
-            #else
-            if #available(iOS 2.0, OSX 10.7, tvOS 9.0, watchOS 2.0, macCatalyst 13.0, *) {
-                return try secRandomBytes(count: count)
-            } else {
-                throw CryptoKitError.noRandomnessSource
-            }
-            #endif
+            return try randomWithoutSource(count: count)
         }
         
         guard let data = randomBytes(count), data.count == count else {
@@ -53,9 +45,20 @@ public enum Randomness {
         return data
     }
     
+    private static func randomWithoutSource(count: Int) throws -> [UInt8] {
+        #if os(Linux)
+        return randomLinux(count)
+        #else
+        guard #available(iOS 2.0, OSX 10.7, tvOS 9.0, watchOS 2.0, macCatalyst 13.0, *) else {
+            throw CryptoKitError.noRandomnessSource
+        }
+        return try secRandomBytes(count: count)
+        #endif
+    }
+    
     @available(iOS 2.0, OSX 10.7, tvOS 9.0, watchOS 2.0, macCatalyst 13.0, *)
-    private static func secRandomBytes(count: Int) throws -> Data {
-        var keyData = Data(count: count)
+    private static func secRandomBytes(count: Int) throws -> [UInt8] {
+        var keyData = [UInt8](repeating: 0, count: count)
         let result = keyData.withUnsafeMutableBytes {
             SecRandomCopyBytes(kSecRandomDefault, count, $0.baseAddress!)
         }
@@ -67,8 +70,8 @@ public enum Randomness {
     }
     
     #if os(Linux)
-    private static func randomLinux(_ count: Int) -> Data {
-        Data((0..<count).map({ _ in UInt8.random(in: 0...UInt8.max) }))
+    private static func randomLinux(_ count: Int) -> [UInt8] {
+        (0..<count).map({ _ in UInt8.random(in: 0...UInt8.max) })
     }
     #endif
 }
