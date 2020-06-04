@@ -4,8 +4,11 @@
 //
 //  Created by Christoph on 13.01.20.
 //
-
-import Foundation
+#if os(Linux)
+import SwiftGlibc
+#else
+import Darwin
+#endif
 
 public enum Randomness {
     
@@ -33,11 +36,15 @@ public enum Randomness {
     static func randomBytes(count: Int) throws -> Data {
         // Use custom randomness source
         guard let randomBytes = Randomness.source else {
+            #if os(Linux)
+                return randomLinux(count)
+            #else
             if #available(iOS 2.0, OSX 10.7, tvOS 9.0, watchOS 2.0, macCatalyst 13.0, *) {
                 return try secRandomBytes(count: count)
             } else {
                 throw CryptoKitError.noRandomnessSource
             }
+            #endif
         }
         
         guard let data = randomBytes(count), data.count == count else {
@@ -47,7 +54,7 @@ public enum Randomness {
     }
     
     @available(iOS 2.0, OSX 10.7, tvOS 9.0, watchOS 2.0, macCatalyst 13.0, *)
-    static func secRandomBytes(count: Int) throws -> Data {
+    private static func secRandomBytes(count: Int) throws -> Data {
         var keyData = Data(count: count)
         let result = keyData.withUnsafeMutableBytes {
             SecRandomCopyBytes(kSecRandomDefault, count, $0.baseAddress!)
@@ -58,4 +65,10 @@ public enum Randomness {
             throw CryptoKitError.noRandomnessAvailable
         }
     }
+    
+    #if os(Linux)
+    private static func randomLinux(_ count: Int) -> Data {
+        Data((0..<count).map({ _ in UInt8.random(in: 0...UInt8.max) }))
+    }
+    #endif
 }
