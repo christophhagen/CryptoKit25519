@@ -56,6 +56,7 @@ public enum Randomness {
         #endif
     }
     
+    #if !os(Linux)
     @available(iOS 2.0, OSX 10.7, tvOS 9.0, watchOS 2.0, macCatalyst 13.0, *)
     private static func secRandomBytes(count: Int) throws -> [UInt8] {
         var keyData = [UInt8](repeating: 0, count: count)
@@ -68,6 +69,7 @@ public enum Randomness {
             throw CryptoKitError.noRandomnessAvailable
         }
     }
+    #endif
     
     private static func randomDefault(_ count: Int) -> [UInt8] {
         (0..<count).map({ _ in UInt8.random(in: 0...UInt8.max) })
