@@ -44,11 +44,13 @@ Randomness.source = { count in
 ````
 
 The custom source is then use for calls to the following functions:
-- `Curve25519.Signing.PrivateKey()`
-- `Curve25519.KeyAgreement.PrivateKey()`
-- `SymmetricKey(size:)`
-- `AES.GCM.Nonce()`
-- `AES.GCM.seal(_:key:nonce:authenticating)`
+````swift
+Curve25519.Signing.PrivateKey()
+Curve25519.KeyAgreement.PrivateKey()
+SymmetricKey(size:)
+AES.GCM.Nonce()
+AES.GCM.seal(_:key:nonce:authenticating)
+````
 
 ### Signing
 
