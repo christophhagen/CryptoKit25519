@@ -47,10 +47,10 @@ public enum Randomness {
     
     private static func randomWithoutSource(count: Int) throws -> [UInt8] {
         #if os(Linux)
-        return randomLinux(count)
+        return randomDefault(count)
         #else
         guard #available(iOS 2.0, OSX 10.7, tvOS 9.0, watchOS 2.0, macCatalyst 13.0, *) else {
-            throw CryptoKitError.noRandomnessSource
+            return randomDefault(count)
         }
         return try secRandomBytes(count: count)
         #endif
@@ -69,9 +69,7 @@ public enum Randomness {
         }
     }
     
-    #if os(Linux)
-    private static func randomLinux(_ count: Int) -> [UInt8] {
+    private static func randomDefault(_ count: Int) -> [UInt8] {
         (0..<count).map({ _ in UInt8.random(in: 0...UInt8.max) })
     }
-    #endif
 }
