@@ -34,18 +34,22 @@ If you need additional operations, have a look at [OpenCrypto](https://github.co
 
 ### Randomness
 
-`CryptoKit25519` requires a source of cryptographically secure random numbers to generate keys. On supported platforms (iOS 2.0+, macOS 10.7+, tvOS 9.0+, watchOS 2.0+, macCatalyst 13.0+) [SecCopyRandomBytes](https://developer.apple.com/documentation/security/1399291-secrandomcopybytes) is used as the default. On other platforms, this source MUST be provided before any of the following operations are performed:
-- `Curve25519.Signing.PrivateKey()`
-- `Curve25519.KeyAgreement.PrivateKey()`
-- `SymmetricKey(size:)`
-- `AES.GCM.Nonce()`
-- `AES.GCM.seal(_:key:nonce:authenticating)`
+`CryptoKit25519` requires a source of cryptographically secure random numbers to generate keys. On supported platforms (iOS 2.0+, macOS 10.7+, tvOS 9.0+, watchOS 2.0+, macCatalyst 13.0+) [SecCopyRandomBytes](https://developer.apple.com/documentation/security/1399291-secrandomcopybytes) is used as the default. On other platforms, the random bytes are calculated based on [UInt8.random(in:using:)](https://developer.apple.com/documentation/swift/uint8/3020624-random).
 
-You can provide random numbers by setting `Randomness.source`:
+You can provide a custom source for random numbers by setting `Randomness.source`:
 ````swift
 Randomness.source = { count in
-    return ... // Return `count` random bytes, or nil, if no randomness is available.
+    return ... // Return a [UInt8] with `count` random bytes, or nil, if no randomness is available.
 }
+````
+
+The custom source is then use for calls to the following functions:
+````swift
+Curve25519.Signing.PrivateKey()
+Curve25519.KeyAgreement.PrivateKey()
+SymmetricKey(size:)
+AES.GCM.Nonce()
+AES.GCM.seal(_:key:nonce:authenticating)
 ````
 
 ### Signing
